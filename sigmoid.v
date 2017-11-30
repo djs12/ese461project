@@ -2,9 +2,9 @@
 //Could be made synchronous if we want
 //Names of input and output can be changed
 
-module sigmoid(/*clk, reset, */sig_in, sig_out);
+module sigmoid(clk, /*, reset, */sig_in, sig_out);
 
-//input clk, reset;
+input clk;//, reset;
 input  [15:0] sig_in;
 output [15:0] sig_out;
 
@@ -13,7 +13,7 @@ reg  [15:0] lut_in;
 reg  [15:0] sig_out;
 
 
-Lookup_Table LT(lut_in, lut_out);
+Lookup_Table LT(clk, lut_in, lut_out);
 
 always @ (sig_in, lut_out)
 begin
@@ -32,14 +32,15 @@ end
 endmodule
 
 
-module Lookup_Table(x, y);
+module Lookup_Table(clk, x, y);
 
+input clk;
 input  [15:0] x;
 output [15:0] y;
 
 reg [15:0] y;
 
-always @ (x)
+always @ (posedge clk)
 begin                                
    if(x >= 16'b0000000000000000 && x < 16'b0000000000011010) begin y = 16'b0000000010000000; end //0.0
    if(x >= 16'b0000000000011010 && x < 16'b0000000000110011) begin y = 16'b0000000001111010; end //0.1
