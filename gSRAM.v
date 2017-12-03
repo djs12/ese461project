@@ -16,7 +16,7 @@ reg [15:0] rdata;
 
 //2D array 10 by 10 composed of 16 bit elements
 //Row major order
-reg [15:0] mem [9:0][9:0]
+reg [15:0] mem [9:0][9:0];
 
 
 //initialize gSRAM to be all zero
@@ -39,7 +39,7 @@ begin
   end
 
   else begin
-    rdata <= mem[row][col]
+    rdata <= mem[row][col];
   end
 
 end
