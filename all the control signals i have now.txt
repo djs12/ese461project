@@ -1,0 +1,16 @@
+    output reg MAC_layer1_mux, //0: add to partial sum. 1: add to 0 (clearing)
+    
+    output reg reg_holder_in, // write enable of reg holder
+    output reg reg_holder_mux_in, //0: load from MACs, 160 bits. 1: load from LUT, 16 bits, address provided
+    output reg reg_holder_out, // output enable of reg holder
+    output reg reg_holder_mux_out, //0: output to LUT, 16 bits. 1: output to Multiplier, 16 bits. Address provided  
+    output reg [3:0] reg_holder_addr
+
+
+-------------------------------------
+1 bit: weight2_gotoNextElement
+1 bit: weight2_gotoNextRow
+4 bits: GSRAM_row_addr (0~9)
+4 bits: GSRAM_col_addr (0~9)
+1 bit: GSRAM_output_mux: 0->going to the adder, 1->going to the LUT
+1 bit: GSRAM_input_mux: 0->going to the adder, 1->going to the LUT
