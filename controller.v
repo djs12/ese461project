@@ -12,7 +12,7 @@ module controller(
     
     output reg LUT_mux, // 0: load from reg_holder, 1: load from GSRAM
     
-    output reg weight2_loadNextElement,
+    output reg [3:0] weight2_addr, //0~9
     output reg weight2_loadNextRow,
     
     output reg [3:0] GSRAM_addr_row, // 0~9
@@ -41,7 +41,7 @@ always @ * begin
     reg_holder_mux = 0;
     reg_holder_addr = 0;
     LUT_mux = 0;
-    weight2_loadNextElement = 0;
+    weight2_addr = 0;
     weight2_loadNextRow = 0;
     GSRAM_addr_row = 0;
     GSRAM_addr_col = 0;
@@ -82,7 +82,6 @@ always @ * begin
         if (count_10Q==9) begin
             count_10D = 0;
             weight2_loadNextRow = 1;
-            weight2_loadNextElement = 1;
             nextState = REG_TO_MAC;
         end else begin
             count_10D = count_10Q + 1;
@@ -95,6 +94,7 @@ always @ * begin
         GSRAM_addr_row = count_10Q;
         GSRAM_addr_col = count_10_2Q;
         reg_holder_addr = count_10Q;
+        weight2_addr = count_10_2Q;
         if (count_10_2Q == 9 && count_10Q == 9) begin
             count_10D = 0;
             count_10_2D = 0;
@@ -106,7 +106,6 @@ always @ * begin
             if (count_10Q == 9) begin
                 count_10D = 0;
                 count_10_2D = count_10_2Q + 1;
-                weight2_loadNextElement = 1;
             end
         end
     end
