@@ -29,11 +29,11 @@ Wires and Connections
 */
 
 //Layer 2 multiplication result
-wire [15:0] m2product;
+reg [31:0] m2product;
 wire [15:0] m2DataIn;
 
 //Layer 1 connections
-wire [159:0] pixels;
+//wire [159:0] pixels;
 wire [159:0] column;
 
 
@@ -49,7 +49,7 @@ wire we;
 wire [3:0] row;
 wire [3:0] col;
 //wire [15:0] wdata;
-wire [15:0] m2result;
+reg [15:0] m2result;
 wire gSramMuxSel;
 wire [15:0] rdata;
 
@@ -62,7 +62,7 @@ wire l1reset;
 wire routeDataRegWrEn;
 wire routeDataRegWrSel;
 wire routeDataOutMuxSel;
-wire [4:0] routeDataRegAddr;
+wire [3:0] routeDataRegAddr;
 
 
 /*
@@ -74,7 +74,7 @@ Instantiation of Modules
 Layer1Calc STAGE_1(
 .clk(clk),
 .reset(l1reset), //verify this is the correct reset
-.pixels(pixels),
+.pixels(q_w1),
 .weight(weight1),
 .column(column)
 );
@@ -137,7 +137,7 @@ gSRAM ANSWER(
 );
 
 
-sigmoid SIGMOID(
+Sigmoid SIGMOID(
 .clk(clk),
 .sig_in(sig_in),
 .sig_out(sig_out)
