@@ -107,7 +107,7 @@ RouteData ROUTEDATA(
 .Addr(routeDataRegAddr),
 .DataOutSel(routeDataOutMuxSel),
 .DataOut(sig_in),
-.DataToM2Mult(m2DataIn)
+.DataToM2(m2DataIn)
 );
 
 
