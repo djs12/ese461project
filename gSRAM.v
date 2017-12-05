@@ -3,16 +3,22 @@ clk,
 we,
 row,
 col,
-wdata, //write data
+//wdata, //write data
+m2result,
+lutdata,
+inmuxsel,
 rdata  //read data
 );
 
-input clk, we;
+input clk, we, inmuxsel;
 input [3:0] row, col;
-input [15:0] wdata;
+//input [15:0] wdata;
+input [15:0] lutdata;
+input [15:0] m2result;
 output [15:0] rdata;
 
 reg [15:0] rdata;
+reg [15:0] wdata;
 
 //2D array 10 by 10 composed of 16 bit elements
 //Row major order
@@ -29,6 +35,15 @@ begin
     end
   end
 
+end
+
+always @ (m2result, lutdata, inmuxsel)
+begin
+   case(inmuxsel)
+   begin
+   1'b0: begin wdata = m2result; end
+   1'b1: begin end wdata = lutdata; end
+   endcase
 end
 
 always @ (posedge clk)
@@ -48,4 +63,5 @@ end
 
 
 endmodule
+
 
