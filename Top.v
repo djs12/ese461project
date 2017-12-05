@@ -27,10 +27,9 @@ output weight2_loadNextRow;
 Wires and Connections
 *************************************************************************
 */
-
 //Layer 2 multiplication result
-reg [31:0] m2product;
-wire [15:0] m2DataIn;
+reg signed [31:0]  m2product;
+wire signed [15:0]  m2DataIn;
 
 //Layer 1 connections
 //wire [159:0] pixels;
@@ -42,16 +41,16 @@ wire [159:0] q_w1;
 
 //Weight 2 row vector SRAM connections
 wire [3:0] addr;
-wire [15:0] q_w2;
+wire signed [15:0] q_w2;
 
 //gSRAM connections
 wire we;
 wire [3:0] row;
 wire [3:0] col;
 //wire [15:0] wdata;
-reg [15:0] m2result;
+reg signed [15:0] m2result;
 wire gSramMuxSel;
-wire [15:0] rdata;
+wire signed [15:0] rdata;
 
 //sigmoid connections
 wire [15:0] sig_in;
