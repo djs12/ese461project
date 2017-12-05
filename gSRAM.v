@@ -25,12 +25,15 @@ reg [15:0] wdata;
 reg [15:0] mem [9:0][9:0];
 
 
+integer r;
+integer c;
+
 //initialize gSRAM to be all zero
 initial
 begin
 
-  for (int r=0; r < 10; r=r+1) begin
-    for (int c=0; c < 10; c=c+1) begin
+  for (r=0; r < 10; r=r+1) begin
+    for (c=0; c < 10; c=c+1) begin
       mem[r][c] = 0;
     end
   end
@@ -40,9 +43,8 @@ end
 always @ (m2result, lutdata, inmuxsel)
 begin
    case(inmuxsel)
-   begin
    1'b0: begin wdata = m2result; end
-   1'b1: begin end wdata = lutdata; end
+   1'b1: begin wdata = lutdata; end
    endcase
 end
 
