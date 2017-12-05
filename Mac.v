@@ -1,6 +1,6 @@
 module Mac(clk, reset, pixel, weight, result);
 
-input clk, load;
+input clk, reset;
 input  [15:0] pixel;
 input  [15:0] weight;
 output [15:0] result;
@@ -23,3 +23,4 @@ always @ (pixel, weight, result) begin
     sum = result + product[23:8];
 end
 
+endmodule
