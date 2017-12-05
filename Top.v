@@ -7,8 +7,8 @@
 module Top(
 clk,
 reset,
-weight1
-
+weight1,
+weight2_loadNextRow
 );
 
 /*
@@ -19,6 +19,7 @@ Inputs
 input clk;
 input reset;
 input [15:0] weight1;
+output weight2_loadNextRow;
 
 
 /*
@@ -43,7 +44,9 @@ wire [15:0] q_w2;
 wire we;
 wire [3:0] row;
 wire [3:0] col;
-wire [15:0] wdata;
+//wire [15:0] wdata;
+wire [15:0] m2result;
+wire gSramMuxSel;
 wire [15:0] rdata;
 
 //sigmoid connections
@@ -82,12 +85,13 @@ controller CNTRL(
 .reg_holder_addr(routeDataRegAddr),
 .LUT_mux(routeDataOutMuxSel),
 .weight2_addr(addr),
-.weight2_loadNextRow(////),
+.weight2_loadNextRow(weight2_loadNextRow),
 .GSRAM_addr_row(row),
 .GSRAM_addr_col(col),
 .GSRAM_in(we),
-.GSRAM_mux(///////)
+.GSRAM_mux(gSramMuxSel)
 );
+
 
 RouteData ROUTEDATA(
 .clk(clk),
@@ -120,8 +124,24 @@ gSRAM ANSWER(
 .we(we),
 .row(row),
 .col(col),
-.wdata(wdata),
+//.wdata(wdata),
+.m2result(m2result),
+.lutdata(sig_out),
+.inmuxsel(gSramMuxSel),
 .rdata(rdata)
+);
+
+
+module gSRAM(
+clk,
+we,
+row,
+col,
+//wdata, //write data
+m2result,
+lutdata,
+inmuxsel,
+rdata  //read data
 );
 
 
