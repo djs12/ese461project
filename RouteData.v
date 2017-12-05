@@ -1,4 +1,4 @@
-module RouteData(clk, M1Result, SigFeedback, SramData, RegLoadEn, RegLoadSel, Addr, DataOutSel, DataOut);
+module RouteData(clk, M1Result, SigFeedback, SramData, RegLoadEn, RegLoadSel, Addr, DataOutSel, DataOut, DataToM2);
 
 input clk, RegLoadEn, RegLoadSel, DataOutSel;
 input [159:0] M1Result;
@@ -6,8 +6,8 @@ input [15:0] SigFeedback;
 input [3:0] Addr;
 input [15:0] SramData;
 output reg [15:0] DataOut;
+output reg [15:0]  DataToM2;
 
-reg [15:0] regOut;
 reg [159:0] regData;
 
 
@@ -43,25 +43,25 @@ begin
    else begin //if(RegLoadEn == 0) /*&& OutSel == 0*/) begin
      //output to LUT based on address
       case(Addr)
-      4'b0000: begin regOut <= regData[15:0]; end
-      4'b0001: begin regOut <= regData[31:16]; end
-      4'b0010: begin regOut <= regData[47:32]; end
-      4'b0011: begin regOut <= regData[63:48]; end
-      4'b0100: begin regOut <= regData[79:64]; end
-      4'b0101: begin regOut <= regData[95:80]; end
-      4'b0110: begin regOut <= regData[111:96]; end
-      4'b0111: begin regOut <= regData[127:112]; end
-      4'b1000: begin regOut <= regData[143:128]; end
-      4'b1001: begin regOut <= regData[159:144]; end
+      4'b0000: begin DataToM2 <= regData[15:0]; end
+      4'b0001: begin DataToM2 <= regData[31:16]; end
+      4'b0010: begin DataToM2 <= regData[47:32]; end
+      4'b0011: begin DataToM2 <= regData[63:48]; end
+      4'b0100: begin DataToM2 <= regData[79:64]; end
+      4'b0101: begin DataToM2 <= regData[95:80]; end
+      4'b0110: begin DataToM2 <= regData[111:96]; end
+      4'b0111: begin DataToM2 <= regData[127:112]; end
+      4'b1000: begin DataToM2 <= regData[143:128]; end
+      4'b1001: begin DataToM2 <= regData[159:144]; end
       endcase
    end
 end
 
-always @ (SramData, DataOutSel, regOut)
+always @ (SramData, DataOutSel, DataToM2)
 begin
    case(DataOutSel)
    1'b0: begin //selecting data from Intermediate Reg to LUT
-         DataOut = regOut;
+         DataOut = DataToM2;
          end
    1'b1: begin //selecting data from GSRAM to LUT
          DataOut = SramData;
