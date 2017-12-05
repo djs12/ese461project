@@ -132,19 +132,6 @@ gSRAM ANSWER(
 );
 
 
-module gSRAM(
-clk,
-we,
-row,
-col,
-//wdata, //write data
-m2result,
-lutdata,
-inmuxsel,
-rdata  //read data
-);
-
-
 sigmoid SIGMOID(
 .clk(clk),
 .sig_in(sig_in),
