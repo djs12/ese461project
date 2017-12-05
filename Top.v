@@ -28,6 +28,10 @@ Wires and Connections
 *************************************************************************
 */
 
+//Layer 2 multiplication result
+wire [15:0] m2product;
+wire [15:0] m2DataIn;
+
 //Layer 1 connections
 wire [159:0] pixels;
 wire [159:0] column;
@@ -102,7 +106,8 @@ RouteData ROUTEDATA(
 .RegLoadSel(routeDataRegWrSel),
 .Addr(routeDataRegAddr),
 .DataOutSel(routeDataOutMuxSel),
-.DataOut(sig_in)
+.DataOut(sig_in),
+.DataToM2Mult(m2DataIn)
 );
 
 
@@ -138,6 +143,11 @@ sigmoid SIGMOID(
 .sig_out(sig_out)
 );
 
+
+always @ (q_w2, rdata, m2DataIn) begin
+    m2product = q_w2 * m2DataIn;
+    m2result = rdata + m2product[23:8];
+end
 
 endmodule
 
