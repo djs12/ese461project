@@ -1,0 +1,1030 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 3
+        -greater_path 0.00
+        -max_paths 20
+Design : Top
+Version: J-2014.09-SP5
+Date   : Tue Dec  5 20:06:16 2017
+****************************************
+
+Operating Conditions: nom_pvt   Library: vtvt_tsmc180
+Wire Load Model Mode: top
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M7/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     258.51     258.51 f
+  U591/op (inv_1)                        111.01     369.53 r
+  U592/op (nand2_1)                      123.39     492.92 f
+  U593/op (or2_1)                        703.18    1196.10 f
+  U7998/op (nand2_1)                     160.36    1356.46 r
+  U8012/op (xor2_1)                      182.71    1539.17 r
+  U8024/s (fulladder)                   4343.87    5883.04 f
+  U8043/s (fulladder)                   3057.46    8940.50 f
+  U8082/co (fulladder)                  2039.92   10980.42 f
+  U8450/co (fulladder)                  1284.99   12265.41 f
+  U8455/co (fulladder)                   623.34   12888.75 f
+  U8456/op (xor2_1)                      191.66   13080.41 r
+  U8457/op (xor2_1)                      152.81   13233.22 r
+  U8459/op (xor2_1)                      160.26   13393.49 r
+  U8471/op (xor2_1)                      156.58   13550.06 f
+  U8479/op (xor2_1)                      228.42   13778.48 f
+  U8481/op (xor2_1)                      452.64   14231.12 r
+  U8486/op (xor2_1)                      202.37   14433.49 f
+  U8490/op (xor2_1)                      783.99   15217.48 f
+  STAGE_1/M7/result_reg[15]/ip (dp_1)      0.00   15217.48 f
+  data arrival time                               15217.48
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M7/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -15217.48
+  -----------------------------------------------------------
+  slack (MET)                                     34028.36
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M7/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     258.51     258.51 f
+  U591/op (inv_1)                        111.01     369.53 r
+  U592/op (nand2_1)                      123.39     492.92 f
+  U593/op (or2_1)                        703.18    1196.10 f
+  U7998/op (nand2_1)                     160.36    1356.46 r
+  U8012/op (xor2_1)                      182.71    1539.17 r
+  U8024/s (fulladder)                   4343.87    5883.04 f
+  U8043/s (fulladder)                   3057.46    8940.50 f
+  U8082/co (fulladder)                  2039.92   10980.42 f
+  U8450/co (fulladder)                  1284.99   12265.41 f
+  U8455/co (fulladder)                   623.34   12888.75 f
+  U8456/op (xor2_1)                      191.66   13080.41 r
+  U8457/op (xor2_1)                      149.68   13230.09 f
+  U8459/op (xor2_1)                      158.81   13388.90 r
+  U8471/op (xor2_1)                      156.58   13545.48 f
+  U8479/op (xor2_1)                      228.42   13773.90 f
+  U8481/op (xor2_1)                      452.64   14226.54 r
+  U8486/op (xor2_1)                      202.37   14428.91 f
+  U8490/op (xor2_1)                      783.99   15212.90 f
+  STAGE_1/M7/result_reg[15]/ip (dp_1)      0.00   15212.90 f
+  data arrival time                               15212.90
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M7/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -15212.90
+  -----------------------------------------------------------
+  slack (MET)                                     34032.94
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M7/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     258.51     258.51 f
+  U591/op (inv_1)                        111.01     369.53 r
+  U592/op (nand2_1)                      123.39     492.92 f
+  U593/op (or2_1)                        703.18    1196.10 f
+  U7998/op (nand2_1)                     160.36    1356.46 r
+  U8012/op (xor2_1)                      182.71    1539.17 r
+  U8024/s (fulladder)                   4343.87    5883.04 f
+  U8043/s (fulladder)                   3057.46    8940.50 f
+  U8082/co (fulladder)                  2039.92   10980.42 f
+  U8450/co (fulladder)                  1284.99   12265.41 f
+  U8455/co (fulladder)                   623.34   12888.75 f
+  U8456/op (xor2_1)                      191.66   13080.41 r
+  U8457/op (xor2_1)                      152.81   13233.22 r
+  U8459/op (xor2_1)                      158.50   13391.72 f
+  U8471/op (xor2_1)                      153.67   13545.39 f
+  U8479/op (xor2_1)                      228.42   13773.80 f
+  U8481/op (xor2_1)                      452.64   14226.45 r
+  U8486/op (xor2_1)                      202.37   14428.82 f
+  U8490/op (xor2_1)                      783.99   15212.81 f
+  STAGE_1/M7/result_reg[15]/ip (dp_1)      0.00   15212.81 f
+  data arrival time                               15212.81
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M7/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -15212.81
+  -----------------------------------------------------------
+  slack (MET)                                     34033.03
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M2/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U5327/op (nand2_1)                     253.16    2072.00 f
+  U5328/op (xor2_1)                      193.14    2265.14 r
+  U5876/s (fulladder)                   1781.73    4046.87 f
+  U5884/co (fulladder)                  1083.79    5130.66 f
+  U5888/s (fulladder)                    858.78    5989.44 f
+  U5890/s (fulladder)                    825.04    6814.49 f
+  U5911/co (fulladder)                   669.46    7483.95 f
+  U5909/co (fulladder)                   589.74    8073.69 f
+  U5907/co (fulladder)                   587.87    8661.56 f
+  U5905/co (fulladder)                   581.50    9243.06 f
+  U5903/co (fulladder)                   556.89    9799.95 f
+  U5901/co (fulladder)                   719.19   10519.14 f
+  U5899/co (fulladder)                   743.61   11262.75 f
+  U5897/co (fulladder)                   705.92   11968.67 f
+  U5895/co (fulladder)                   621.29   12589.96 f
+  U5918/co (fulladder)                   441.53   13031.50 f
+  U5919/op (xor2_1)                      159.88   13191.38 r
+  U5923/op (xor2_1)                      160.55   13351.92 r
+  U5925/op (xor2_1)                      157.68   13509.61 r
+  U5937/op (xor2_1)                      156.77   13666.37 f
+  U5945/op (xor2_1)                      218.81   13885.18 f
+  U5947/op (xor2_1)                      324.54   14209.72 r
+  U5948/op (xor2_1)                      184.03   14393.75 r
+  U5952/op (xor2_1)                      607.90   15001.65 f
+  STAGE_1/M2/result_reg[15]/ip (dp_1)      0.00   15001.65 f
+  data arrival time                               15001.65
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M2/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -713.40   49286.59
+  data required time                              49286.59
+  -----------------------------------------------------------
+  data required time                              49286.59
+  data arrival time                               -15001.65
+  -----------------------------------------------------------
+  slack (MET)                                     34284.94
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M2/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U5327/op (nand2_1)                     253.16    2072.00 f
+  U5328/op (xor2_1)                      193.14    2265.14 r
+  U5876/s (fulladder)                   1781.73    4046.87 f
+  U5884/co (fulladder)                  1083.79    5130.66 f
+  U5888/s (fulladder)                    858.78    5989.44 f
+  U5890/s (fulladder)                    825.04    6814.49 f
+  U5911/co (fulladder)                   669.46    7483.95 f
+  U5909/co (fulladder)                   589.74    8073.69 f
+  U5907/co (fulladder)                   587.87    8661.56 f
+  U5905/co (fulladder)                   581.50    9243.06 f
+  U5903/co (fulladder)                   556.89    9799.95 f
+  U5901/co (fulladder)                   719.19   10519.14 f
+  U5899/co (fulladder)                   743.61   11262.75 f
+  U5897/co (fulladder)                   705.92   11968.67 f
+  U5895/co (fulladder)                   621.29   12589.96 f
+  U5918/co (fulladder)                   441.53   13031.50 f
+  U5919/op (xor2_1)                      159.88   13191.38 r
+  U5923/op (xor2_1)                      160.55   13351.92 r
+  U5925/op (xor2_1)                      156.35   13508.28 f
+  U5937/op (xor2_1)                      154.09   13662.37 f
+  U5945/op (xor2_1)                      218.81   13881.18 f
+  U5947/op (xor2_1)                      324.54   14205.72 r
+  U5948/op (xor2_1)                      184.03   14389.75 r
+  U5952/op (xor2_1)                      607.90   14997.65 f
+  STAGE_1/M2/result_reg[15]/ip (dp_1)      0.00   14997.65 f
+  data arrival time                               14997.65
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M2/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -713.40   49286.59
+  data required time                              49286.59
+  -----------------------------------------------------------
+  data required time                              49286.59
+  data arrival time                               -14997.65
+  -----------------------------------------------------------
+  slack (MET)                                     34288.94
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M2/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U5327/op (nand2_1)                     253.16    2072.00 f
+  U5328/op (xor2_1)                      193.14    2265.14 r
+  U5876/s (fulladder)                   1781.73    4046.87 f
+  U5884/co (fulladder)                  1083.79    5130.66 f
+  U5888/s (fulladder)                    858.78    5989.44 f
+  U5890/s (fulladder)                    825.04    6814.49 f
+  U5911/co (fulladder)                   669.46    7483.95 f
+  U5909/co (fulladder)                   589.74    8073.69 f
+  U5907/co (fulladder)                   587.87    8661.56 f
+  U5905/co (fulladder)                   581.50    9243.06 f
+  U5903/co (fulladder)                   556.89    9799.95 f
+  U5901/co (fulladder)                   719.19   10519.14 f
+  U5899/co (fulladder)                   743.61   11262.75 f
+  U5897/co (fulladder)                   705.92   11968.67 f
+  U5895/co (fulladder)                   621.29   12589.96 f
+  U5918/co (fulladder)                   441.53   13031.50 f
+  U5919/op (xor2_1)                      159.88   13191.38 r
+  U5923/op (xor2_1)                      158.73   13350.11 f
+  U5925/op (xor2_1)                      155.25   13505.36 r
+  U5937/op (xor2_1)                      156.77   13662.12 f
+  U5945/op (xor2_1)                      218.81   13880.93 f
+  U5947/op (xor2_1)                      324.54   14205.47 r
+  U5948/op (xor2_1)                      184.03   14389.50 r
+  U5952/op (xor2_1)                      607.90   14997.41 f
+  STAGE_1/M2/result_reg[15]/ip (dp_1)      0.00   14997.41 f
+  data arrival time                               14997.41
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M2/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -713.40   49286.59
+  data required time                              49286.59
+  -----------------------------------------------------------
+  data required time                              49286.59
+  data arrival time                               -14997.41
+  -----------------------------------------------------------
+  slack (MET)                                     34289.19
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M6/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U1372/op (buf_1)                       765.66    1816.18 r
+  U7721/op (nand2_1)                     252.40    2068.58 f
+  U7734/op (xor2_1)                      193.02    2261.60 r
+  U7746/s (fulladder)                   4341.00    6602.60 f
+  U7798/co (fulladder)                  2218.75    8821.35 f
+  U7797/s (fulladder)                   1944.80   10766.15 f
+  U7825/s (fulladder)                    784.75   11550.90 f
+  U7826/op (inv_1)                       211.40   11762.30 r
+  U7864/co (fulladder)                   360.74   12123.04 r
+  U7894/co (fulladder)                   464.30   12587.35 r
+  U7896/op (xor2_1)                      177.50   12764.85 r
+  U7900/op (xor2_1)                      163.00   12927.85 r
+  U7902/op (xor2_1)                      151.27   13079.12 r
+  U7903/op (xor2_1)                      133.13   13212.25 f
+  U7904/op (xor2_1)                      499.23   13711.48 r
+  U7916/op (xor2_1)                      230.71   13942.19 f
+  U7920/op (xor2_1)                      388.71   14330.89 f
+  STAGE_1/M6/result_reg[15]/ip (dp_1)      0.00   14330.89 f
+  data arrival time                               14330.89
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M6/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -14330.89
+  -----------------------------------------------------------
+  slack (MET)                                     34914.95
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M6/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U1372/op (buf_1)                       765.66    1816.18 r
+  U7721/op (nand2_1)                     252.40    2068.58 f
+  U7734/op (xor2_1)                      193.02    2261.60 r
+  U7746/s (fulladder)                   4341.00    6602.60 f
+  U7798/co (fulladder)                  2218.75    8821.35 f
+  U7797/s (fulladder)                   1944.80   10766.15 f
+  U7825/s (fulladder)                    784.75   11550.90 f
+  U7826/op (inv_1)                       211.40   11762.30 r
+  U7864/co (fulladder)                   360.74   12123.04 r
+  U7894/co (fulladder)                   464.30   12587.35 r
+  U7896/op (xor2_1)                      177.50   12764.85 r
+  U7900/op (xor2_1)                      163.00   12927.85 r
+  U7902/op (xor2_1)                      149.88   13077.73 f
+  U7903/op (xor2_1)                      130.15   13207.89 f
+  U7904/op (xor2_1)                      499.23   13707.12 r
+  U7916/op (xor2_1)                      230.71   13937.82 f
+  U7920/op (xor2_1)                      388.71   14326.53 f
+  STAGE_1/M6/result_reg[15]/ip (dp_1)      0.00   14326.53 f
+  data arrival time                               14326.53
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M6/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -14326.53
+  -----------------------------------------------------------
+  slack (MET)                                     34919.30
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M6/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U1372/op (buf_1)                       765.66    1816.18 r
+  U7721/op (nand2_1)                     252.40    2068.58 f
+  U7734/op (xor2_1)                      193.02    2261.60 r
+  U7746/s (fulladder)                   4341.00    6602.60 f
+  U7798/co (fulladder)                  2218.75    8821.35 f
+  U7797/s (fulladder)                   1944.80   10766.15 f
+  U7825/s (fulladder)                    784.75   11550.90 f
+  U7826/op (inv_1)                       211.40   11762.30 r
+  U7864/co (fulladder)                   360.74   12123.05 r
+  U7894/co (fulladder)                   464.30   12587.35 r
+  U7896/op (xor2_1)                      177.50   12764.85 r
+  U7900/op (xor2_1)                      160.77   12925.62 f
+  U7902/op (xor2_1)                      149.04   13074.67 r
+  U7903/op (xor2_1)                      133.13   13207.80 f
+  U7904/op (xor2_1)                      499.23   13707.02 r
+  U7916/op (xor2_1)                      230.71   13937.73 f
+  U7920/op (xor2_1)                      388.71   14326.44 f
+  STAGE_1/M6/result_reg[15]/ip (dp_1)      0.00   14326.44 f
+  data arrival time                               14326.44
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M6/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -754.16   49245.84
+  data required time                              49245.84
+  -----------------------------------------------------------
+  data required time                              49245.84
+  data arrival time                               -14326.44
+  -----------------------------------------------------------
+  slack (MET)                                     34919.40
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M10/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)                     0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)                    169.61     169.61 r
+  U591/op (inv_1)                                        96.56     266.17 f
+  U592/op (nand2_1)                                      90.81     356.97 r
+  U593/op (or2_1)                                       693.55    1050.52 r
+  U594/op (buf_1)                                       768.31    1818.84 r
+  U4910/op (nand2_1)                                    253.16    2072.00 f
+  U4911/op (xor2_1)                                     193.14    2265.14 r
+  U5062/co (fulladder)                                 1326.19    3591.33 r
+  U5073/co (fulladder)                                  976.86    4568.19 r
+  U5066/s (fulladder)                                   847.36    5415.55 f
+  U5071/s (fulladder)                                   564.42    5979.97 f
+  U5072/op (inv_1)                                      169.83    6149.80 r
+  U5081/co (fulladder)                                  337.69    6487.49 r
+  U9417/co (fulladder)                                  455.45    6942.94 r
+  U9872/co (fulladder)                                  357.88    7300.82 r
+  U9873/op (inv_1)                                       95.06    7395.88 f
+  U9890/co (fulladder)                                  318.66    7714.54 f
+  U9888/co (fulladder)                                  572.47    8287.01 f
+  U9886/co (fulladder)                                  569.17    8856.18 f
+  U9884/co (fulladder)                                  547.29    9403.46 f
+  U9882/co (fulladder)                                  716.68   10120.14 f
+  U9880/co (fulladder)                                  740.91   10861.05 f
+  U9878/co (fulladder)                                  703.53   11564.58 f
+  U9876/co (fulladder)                                  619.72   12184.30 f
+  U9905/co (fulladder)                                  441.11   12625.41 f
+  U9906/op (xor2_1)                                     159.81   12785.23 r
+  U9910/op (xor2_1)                                     153.76   12938.98 r
+  U9911/op (xor2_1)                                     132.77   13071.75 f
+  U9912/op (xor2_1)                                     504.70   13576.45 r
+  U9913/op (xor2_1)                                     198.02   13774.47 r
+  U9914/op (xor2_1)                                     154.50   13928.96 r
+  U9928/op (xor2_1)                                     157.24   14086.21 f
+  U9932/op (xor2_1)                                     183.52   14269.73 f
+  STAGE_1/M10/result_reg[15]/ip (dp_1)                    0.00   14269.73 f
+  data arrival time                                              14269.73
+
+  clock clk (rise edge)                               50000.00   50000.00
+  clock network delay (ideal)                             0.00   50000.00
+  STAGE_1/M10/result_reg[15]/ck (dp_1)                    0.00   50000.00 r
+  library setup time                                   -713.40   49286.59
+  data required time                                             49286.59
+  --------------------------------------------------------------------------
+  data required time                                             49286.59
+  data arrival time                                              -14269.73
+  --------------------------------------------------------------------------
+  slack (MET)                                                    35016.87
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M10/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)                     0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)                    169.61     169.61 r
+  U591/op (inv_1)                                        96.56     266.17 f
+  U592/op (nand2_1)                                      90.81     356.97 r
+  U593/op (or2_1)                                       693.55    1050.52 r
+  U594/op (buf_1)                                       768.31    1818.84 r
+  U4910/op (nand2_1)                                    253.16    2072.00 f
+  U4911/op (xor2_1)                                     193.14    2265.14 r
+  U5062/co (fulladder)                                 1326.19    3591.33 r
+  U5073/co (fulladder)                                  976.86    4568.19 r
+  U5066/s (fulladder)                                   847.36    5415.55 f
+  U5071/s (fulladder)                                   564.42    5979.97 f
+  U5072/op (inv_1)                                      169.83    6149.80 r
+  U5081/co (fulladder)                                  337.69    6487.49 r
+  U9417/co (fulladder)                                  455.45    6942.94 r
+  U9872/co (fulladder)                                  357.88    7300.82 r
+  U9873/op (inv_1)                                       95.06    7395.88 f
+  U9890/co (fulladder)                                  318.66    7714.54 f
+  U9888/co (fulladder)                                  572.47    8287.01 f
+  U9886/co (fulladder)                                  569.17    8856.18 f
+  U9884/co (fulladder)                                  547.29    9403.46 f
+  U9882/co (fulladder)                                  716.68   10120.14 f
+  U9880/co (fulladder)                                  740.91   10861.05 f
+  U9878/co (fulladder)                                  703.53   11564.58 f
+  U9876/co (fulladder)                                  619.72   12184.30 f
+  U9905/co (fulladder)                                  441.11   12625.41 f
+  U9906/op (xor2_1)                                     159.81   12785.23 r
+  U9910/op (xor2_1)                                     153.76   12938.98 r
+  U9911/op (xor2_1)                                     132.77   13071.75 f
+  U9912/op (xor2_1)                                     504.70   13576.45 r
+  U9913/op (xor2_1)                                     198.02   13774.47 r
+  U9914/op (xor2_1)                                     154.50   13928.96 r
+  U9928/op (xor2_1)                                     158.75   14087.71 r
+  U9932/op (xor2_1)                                     178.04   14265.76 f
+  STAGE_1/M10/result_reg[15]/ip (dp_1)                    0.00   14265.76 f
+  data arrival time                                              14265.76
+
+  clock clk (rise edge)                               50000.00   50000.00
+  clock network delay (ideal)                             0.00   50000.00
+  STAGE_1/M10/result_reg[15]/ck (dp_1)                    0.00   50000.00 r
+  library setup time                                   -713.40   49286.59
+  data required time                                             49286.59
+  --------------------------------------------------------------------------
+  data required time                                             49286.59
+  data arrival time                                              -14265.76
+  --------------------------------------------------------------------------
+  slack (MET)                                                    35020.84
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M10/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)                     0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)                    169.61     169.61 r
+  U591/op (inv_1)                                        96.56     266.17 f
+  U592/op (nand2_1)                                      90.81     356.97 r
+  U593/op (or2_1)                                       693.55    1050.52 r
+  U594/op (buf_1)                                       768.31    1818.84 r
+  U4910/op (nand2_1)                                    253.16    2072.00 f
+  U4911/op (xor2_1)                                     193.14    2265.14 r
+  U5062/co (fulladder)                                 1326.19    3591.33 r
+  U5073/co (fulladder)                                  976.86    4568.19 r
+  U5066/s (fulladder)                                   847.36    5415.55 f
+  U5071/s (fulladder)                                   564.42    5979.97 f
+  U5072/op (inv_1)                                      169.83    6149.80 r
+  U5081/co (fulladder)                                  337.69    6487.49 r
+  U9417/co (fulladder)                                  455.45    6942.94 r
+  U9872/co (fulladder)                                  357.88    7300.82 r
+  U9873/op (inv_1)                                       95.06    7395.88 f
+  U9890/co (fulladder)                                  318.66    7714.54 f
+  U9888/co (fulladder)                                  572.47    8287.01 f
+  U9886/co (fulladder)                                  569.17    8856.18 f
+  U9884/co (fulladder)                                  547.29    9403.46 f
+  U9882/co (fulladder)                                  716.68   10120.14 f
+  U9880/co (fulladder)                                  740.91   10861.05 f
+  U9878/co (fulladder)                                  703.53   11564.58 f
+  U9876/co (fulladder)                                  619.72   12184.30 f
+  U9905/co (fulladder)                                  441.11   12625.41 f
+  U9906/op (xor2_1)                                     159.81   12785.23 r
+  U9910/op (xor2_1)                                     153.76   12938.98 r
+  U9911/op (xor2_1)                                     132.77   13071.75 f
+  U9912/op (xor2_1)                                     504.70   13576.45 r
+  U9913/op (xor2_1)                                     198.02   13774.47 r
+  U9914/op (xor2_1)                                     151.48   13925.95 f
+  U9928/op (xor2_1)                                     155.66   14081.62 f
+  U9932/op (xor2_1)                                     183.52   14265.14 f
+  STAGE_1/M10/result_reg[15]/ip (dp_1)                    0.00   14265.14 f
+  data arrival time                                              14265.14
+
+  clock clk (rise edge)                               50000.00   50000.00
+  clock network delay (ideal)                             0.00   50000.00
+  STAGE_1/M10/result_reg[15]/ck (dp_1)                    0.00   50000.00 r
+  library setup time                                   -713.40   49286.59
+  data required time                                             49286.59
+  --------------------------------------------------------------------------
+  data required time                                             49286.59
+  data arrival time                                              -14265.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                    35021.46
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M1/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U594/op (buf_1)                        768.31    1818.84 r
+  U5151/op (nand2_1)                     252.97    2071.81 f
+  U5164/op (xor2_1)                      193.12    2264.93 r
+  U5176/s (fulladder)                   4341.00    6605.93 f
+  U5188/co (fulladder)                  2218.75    8824.68 f
+  U5237/co (fulladder)                  1763.80   10588.47 f
+  U5292/s (fulladder)                   1510.72   12099.19 f
+  U5310/co (fulladder)                   704.53   12803.72 f
+  U5311/op (xor2_1)                      191.63   12995.35 r
+  U5312/op (xor2_1)                      146.18   13141.52 r
+  U5313/op (xor2_1)                      135.18   13276.71 r
+  U5314/op (xor2_1)                      113.70   13390.41 f
+  STAGE_1/M1/result_reg[15]/ip (dp_1)      0.00   13390.41 f
+  data arrival time                               13390.41
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M1/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                   -1126.92   48873.09
+  data required time                              48873.09
+  -----------------------------------------------------------
+  data required time                              48873.09
+  data arrival time                               -13390.41
+  -----------------------------------------------------------
+  slack (MET)                                     35482.68
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M1/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U594/op (buf_1)                        768.31    1818.84 r
+  U5151/op (nand2_1)                     252.97    2071.81 f
+  U5164/op (xor2_1)                      193.12    2264.93 r
+  U5176/s (fulladder)                   4341.00    6605.93 f
+  U5188/co (fulladder)                  2218.75    8824.68 f
+  U5237/co (fulladder)                  1763.80   10588.48 f
+  U5292/s (fulladder)                   1510.72   12099.19 f
+  U5310/co (fulladder)                   704.53   12803.72 f
+  U5311/op (xor2_1)                      191.63   12995.35 r
+  U5312/op (xor2_1)                      146.18   13141.52 r
+  U5313/op (xor2_1)                      133.59   13275.11 f
+  U5314/op (xor2_1)                      110.69   13385.80 f
+  STAGE_1/M1/result_reg[15]/ip (dp_1)      0.00   13385.80 f
+  data arrival time                               13385.80
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M1/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                   -1126.92   48873.09
+  data required time                              48873.09
+  -----------------------------------------------------------
+  data required time                              48873.09
+  data arrival time                               -13385.80
+  -----------------------------------------------------------
+  slack (MET)                                     35487.29
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M1/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U594/op (buf_1)                        768.31    1818.84 r
+  U5151/op (nand2_1)                     252.97    2071.81 f
+  U5164/op (xor2_1)                      193.12    2264.93 r
+  U5176/s (fulladder)                   4341.00    6605.93 f
+  U5188/co (fulladder)                  2218.75    8824.68 f
+  U5237/co (fulladder)                  1763.80   10588.47 f
+  U5292/s (fulladder)                   1510.72   12099.19 f
+  U5310/co (fulladder)                   704.53   12803.72 f
+  U5311/op (xor2_1)                      191.63   12995.35 r
+  U5312/op (xor2_1)                      143.17   13138.51 f
+  U5313/op (xor2_1)                      133.21   13271.72 r
+  U5314/op (xor2_1)                      113.70   13385.42 f
+  STAGE_1/M1/result_reg[15]/ip (dp_1)      0.00   13385.42 f
+  data arrival time                               13385.42
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M1/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                   -1126.92   48873.09
+  data required time                              48873.09
+  -----------------------------------------------------------
+  data required time                              48873.09
+  data arrival time                               -13385.42
+  -----------------------------------------------------------
+  slack (MET)                                     35487.66
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M3/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U4088/op (nand2_1)                     253.16    2072.00 f
+  U4089/op (xor2_1)                      193.14    2265.14 r
+  U6419/s (fulladder)                   1781.73    4046.87 f
+  U6427/co (fulladder)                  1083.79    5130.66 f
+  U6430/s (fulladder)                    858.78    5989.44 f
+  U6432/s (fulladder)                    825.04    6814.48 f
+  U6451/co (fulladder)                   750.50    7564.98 f
+  U6449/co (fulladder)                   611.51    8176.49 f
+  U6447/co (fulladder)                   581.38    8757.87 f
+  U6445/co (fulladder)                   580.04    9337.91 f
+  U6443/co (fulladder)                   555.76    9893.67 f
+  U6441/co (fulladder)                   716.72   10610.40 f
+  U6439/co (fulladder)                   709.12   11319.52 f
+  U6437/co (fulladder)                   673.46   11992.98 f
+  U6488/co (fulladder)                   420.48   12413.46 f
+  U6489/op (inv_1)                       129.60   12543.06 r
+  U6523/co (fulladder)                   276.25   12819.30 r
+  U6525/op (xor2_1)                      166.29   12985.60 r
+  U6526/op (xor2_1)                      138.02   13123.62 r
+  U6527/op (xor2_1)                      135.29   13258.91 r
+  U6528/op (xor2_1)                      132.58   13391.49 f
+  U6529/op (xor2_1)                      417.83   13809.31 f
+  STAGE_1/M3/result_reg[15]/ip (dp_1)      0.00   13809.31 f
+  data arrival time                               13809.31
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M3/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -527.68   49472.32
+  data required time                              49472.32
+  -----------------------------------------------------------
+  data required time                              49472.32
+  data arrival time                               -13809.31
+  -----------------------------------------------------------
+  slack (MET)                                     35663.01
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M3/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U4088/op (nand2_1)                     253.16    2072.00 f
+  U4089/op (xor2_1)                      193.14    2265.14 r
+  U6419/s (fulladder)                   1781.73    4046.87 f
+  U6427/co (fulladder)                  1083.79    5130.66 f
+  U6430/s (fulladder)                    858.78    5989.44 f
+  U6432/s (fulladder)                    825.04    6814.48 f
+  U6451/co (fulladder)                   750.50    7564.98 f
+  U6449/co (fulladder)                   611.51    8176.49 f
+  U6447/co (fulladder)                   581.38    8757.87 f
+  U6445/co (fulladder)                   580.04    9337.91 f
+  U6443/co (fulladder)                   555.76    9893.67 f
+  U6441/co (fulladder)                   716.72   10610.40 f
+  U6439/co (fulladder)                   709.12   11319.52 f
+  U6437/co (fulladder)                   673.46   11992.98 f
+  U6488/co (fulladder)                   420.48   12413.45 f
+  U6489/op (inv_1)                       129.60   12543.06 r
+  U6523/co (fulladder)                   276.24   12819.30 r
+  U6525/op (xor2_1)                      166.29   12985.60 r
+  U6526/op (xor2_1)                      135.94   13121.54 f
+  U6527/op (xor2_1)                      133.35   13254.89 r
+  U6528/op (xor2_1)                      132.58   13387.47 f
+  U6529/op (xor2_1)                      417.83   13805.29 f
+  STAGE_1/M3/result_reg[15]/ip (dp_1)      0.00   13805.29 f
+  data arrival time                               13805.29
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M3/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -527.68   49472.32
+  data required time                              49472.32
+  -----------------------------------------------------------
+  data required time                              49472.32
+  data arrival time                               -13805.29
+  -----------------------------------------------------------
+  slack (MET)                                     35667.03
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M3/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U4088/op (nand2_1)                     253.16    2072.00 f
+  U4089/op (xor2_1)                      193.14    2265.14 r
+  U6419/s (fulladder)                   1781.73    4046.87 f
+  U6427/co (fulladder)                  1083.79    5130.66 f
+  U6430/s (fulladder)                    858.78    5989.44 f
+  U6432/s (fulladder)                    825.04    6814.48 f
+  U6451/co (fulladder)                   750.50    7564.98 f
+  U6449/co (fulladder)                   611.51    8176.49 f
+  U6447/co (fulladder)                   581.38    8757.87 f
+  U6445/co (fulladder)                   580.04    9337.91 f
+  U6443/co (fulladder)                   555.76    9893.67 f
+  U6441/co (fulladder)                   716.72   10610.40 f
+  U6439/co (fulladder)                   709.12   11319.52 f
+  U6437/co (fulladder)                   673.46   11992.98 f
+  U6488/co (fulladder)                   420.48   12413.46 f
+  U6489/op (inv_1)                       129.60   12543.06 r
+  U6523/co (fulladder)                   276.25   12819.30 r
+  U6525/op (xor2_1)                      163.40   12982.71 f
+  U6526/op (xor2_1)                      136.85   13119.55 r
+  U6527/op (xor2_1)                      135.29   13254.85 r
+  U6528/op (xor2_1)                      132.58   13387.43 f
+  U6529/op (xor2_1)                      417.83   13805.25 f
+  STAGE_1/M3/result_reg[15]/ip (dp_1)      0.00   13805.25 f
+  data arrival time                               13805.25
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M3/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -527.68   49472.32
+  data required time                              49472.32
+  -----------------------------------------------------------
+  data required time                              49472.32
+  data arrival time                               -13805.25
+  -----------------------------------------------------------
+  slack (MET)                                     35667.07
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M4/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U6604/op (nand2_1)                     252.97    2071.81 f
+  U6620/op (xor2_1)                      193.12    2264.93 r
+  U6704/s (fulladder)                   3989.04    6253.96 f
+  U6751/s (fulladder)                   2823.19    9077.16 f
+  U6792/co (fulladder)                  1873.03   10950.19 f
+  U6790/s (fulladder)                    773.47   11723.66 f
+  U6791/op (inv_1)                       221.04   11944.70 r
+  U7052/co (fulladder)                   366.17   12310.87 r
+  U7076/co (fulladder)                   394.78   12705.65 r
+  U7077/op (xor2_1)                      149.35   12855.00 r
+  U7078/op (xor2_1)                      142.01   12997.01 r
+  U7080/op (xor2_1)                      157.46   13154.47 r
+  U7106/op (xor2_1)                      151.61   13306.08 r
+  U7107/op (xor2_1)                      135.36   13441.44 r
+  STAGE_1/M4/result_reg[15]/ip (dp_1)      0.00   13441.44 r
+  data arrival time                               13441.44
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M4/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -608.64   49391.36
+  data required time                              49391.36
+  -----------------------------------------------------------
+  data required time                              49391.36
+  data arrival time                               -13441.44
+  -----------------------------------------------------------
+  slack (MET)                                     35949.92
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: STAGE_1/M4/result_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00       0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     169.61     169.61 r
+  U591/op (inv_1)                         96.56     266.17 f
+  U592/op (nand2_1)                       90.81     356.97 r
+  U593/op (or2_1)                        693.55    1050.52 r
+  U911/op (buf_1)                        768.31    1818.84 r
+  U6604/op (nand2_1)                     252.97    2071.81 f
+  U6620/op (xor2_1)                      193.12    2264.93 r
+  U6704/s (fulladder)                   3989.04    6253.96 f
+  U6751/s (fulladder)                   2823.19    9077.16 f
+  U6792/co (fulladder)                  1873.03   10950.19 f
+  U6790/s (fulladder)                    773.47   11723.66 f
+  U6791/op (inv_1)                       221.04   11944.70 r
+  U7052/co (fulladder)                   366.18   12310.87 r
+  U7076/co (fulladder)                   394.78   12705.65 r
+  U7077/op (xor2_1)                      149.35   12855.01 r
+  U7078/op (xor2_1)                      142.01   12997.01 r
+  U7080/op (xor2_1)                      157.46   13154.47 r
+  U7106/op (xor2_1)                      150.16   13304.64 f
+  U7107/op (xor2_1)                      136.24   13440.88 r
+  STAGE_1/M4/result_reg[15]/ip (dp_1)      0.00   13440.88 r
+  data arrival time                               13440.88
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  STAGE_1/M4/result_reg[15]/ck (dp_1)      0.00   50000.00 r
+  library setup time                    -608.64   49391.36
+  data required time                              49391.36
+  -----------------------------------------------------------
+  data required time                              49391.36
+  data arrival time                               -13440.88
+  -----------------------------------------------------------
+  slack (MET)                                     35950.48
+
+
+1
