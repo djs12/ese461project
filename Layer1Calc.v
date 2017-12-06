@@ -18,7 +18,7 @@ Mac M8(clk, reset, pixels[127:112], weight, add_in[127:112], column[127:112]);
 Mac M9(clk, reset, pixels[143:128], weight, add_in[143:128], column[143:128]);
 Mac M10(clk, reset, pixels[159:144], weight, add_in[159:144], column[159:144]);
 
-always @ (reset)
+   always @ (reset, column)
 begin
    case(reset)
    0: begin
