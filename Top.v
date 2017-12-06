@@ -62,6 +62,8 @@ wire routeDataRegWrEn;
 wire routeDataRegWrSel;
 wire routeDataOutMuxSel;
 wire [3:0] routeDataRegAddr;
+    
+wire lreset;
 
 
 /*
@@ -78,11 +80,12 @@ Layer1Calc STAGE_1(
 .column(column)
 );
 
-
+assign lreset = l1reset | reset;
+    
 controller CNTRL(
 .clk(clk),
 .reset(reset),
-.MAC_reset(l1reset), //0: add to partial sum. 1: add to 0 (clearing)
+.MAC_reset(lreset), //0: add to partial sum. 1: add to 0 (clearing)
 .reg_holder_in(routeDataRegWrEn),
 .reg_holder_mux(routeDataRegWrSel),
 .reg_holder_addr(routeDataRegAddr),
