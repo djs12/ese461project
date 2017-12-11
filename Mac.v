@@ -6,6 +6,7 @@ input signed [15:0] weight;
 input signed [15:0] accum;
 output reg signed [15:0] result;
 
+
 reg signed [31:0]  product;
 reg signed [15:0]  sum;
 
@@ -20,4 +21,5 @@ always @ (pixel, weight, accum) begin
 end
 
 endmodule
+
 

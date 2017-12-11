@@ -1,14 +1,18 @@
-
-//module Layer1Calc(clk, reset, pixels[159:0], weight, column);
-//inputSRAM S1(.data(data), /*.addr(addr), .we(we), .clk(clk), */.q(l1Inputs));
-//Layer1Calc L1(clk, layer1Reset, l1Inputs, l1Weight, layer1Out);
-//Sigmoid()
-
 module Top(
 clk,
 reset,
-weight1,
-weight2_loadNextRow
+w1,
+weight2_loadNextRow,
+mem0,
+mem1,
+mem2,
+mem3,
+mem4,
+mem5,
+mem6,
+mem7,
+mem8,
+mem9
 );
 
 /*
@@ -16,141 +20,176 @@ weight2_loadNextRow
 Inputs
 *************************************************************************
 */
+
 input clk;
 input reset;
-input [15:0] weight1;
+input [15:0] w1;
 output weight2_loadNextRow;
 
+output [159:0] mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7, mem8, mem9;
 
 /*
 *************************************************************************
 Wires and Connections
 *************************************************************************
 */
-//Layer 2 multiplication result
-reg signed [31:0]  m2product;
-wire signed [15:0]  m2DataIn;
 
-//Layer 1 connections
-//wire [159:0] pixels;
+//inputSRAM.v
+//clk <- clk
+wire [159:0] q_input;
+
+//Layer1Calc.v
+//clk <- clk
+//globalReset <- reset
+//MAC_reset <- MAC_reset
+//pixels <- q_input
+//weight <- w1
 wire [159:0] column;
 
+//controller.v
+//clk <- clk
+//reset <- reset
+wire MAC_reset;		
+wire reg_holder_in;	 		// write enable of reg holder
+wire reg_holder_mux;	 	//0: load from MACs, 160 bits. 1: load from LUT, 16 bits, address
+wire [3:0] reg_holder_addr;
+wire LUT_mux; 		 		//0: load from reg_holder, 1: load from GSRAM
+wire [3:0] weight2_addr;   	//0~9
+//weight2_loadNextRow <- weight2_loadNextRow    
+wire [3:0] GSRAM_addr_row; 	//0~9
+wire [3:0] GSRAM_addr_col; 	//0~9
+wire GSRAM_in; 
+wire GSRAM_mux; 			// 0->going to the adder, 1->going to the LUT
 
-//Input Vector SRAM connections
-wire [159:0] q_w1;
+//w2SRAM
+//clk <- clk
+//addr <- weight2_addr
+wire [15:0] q_w2;
 
-//Weight 2 row vector SRAM connections
-wire [3:0] addr;
-wire signed [15:0] q_w2;
+//RouteData
+//clk <- clk
+//M1Result <- column (from Layer1)
+wire [15:0] sig_out; //SigFeedback <- sig_out
+wire [15:0] rdata; //SramData <- rdata from the gSRAM
+//RegLoadEn <- reg_holder_in
+//RegLoadSel <- reg_holder_mux
+//Addr <- reg_holder addr
+//DataOutSel <- LUT_mux
+wire [15:0] DataOut;
+wire [15:0] DataToM2;
 
-//gSRAM connections
-wire we;
-wire [3:0] row;
-wire [3:0] col;
-//wire [15:0] wdata;
-reg signed [15:0] m2result;
-wire gSramMuxSel;
-wire signed [15:0] rdata;
+//Sigmoid.v
+//clk <- clk
+//sig_in <- DataOut
+//sig_out <- sig_out
 
-//sigmoid connections
-wire [15:0] sig_in;
-wire [15:0] sig_out;
 
-//controller 
-wire l1reset;
-wire routeDataRegWrEn;
-wire routeDataRegWrSel;
-wire routeDataOutMuxSel;
-wire [3:0] routeDataRegAddr;
-    
-wire lreset;
+//gSRAM.v
+//clk <- clk
+//we <- GSRAM_in
+//row <- GSRAM_addr_row
+//col <- GSRAM_addr_col
+wire [15:0] m2result; // The result performed on DataToM2: this is write data
+//lutdata <- sig_out activation data at the very end
+//inmuxsel <- GSRAM_mux
+//rdata (created above in RouteData)
 
 
 /*
 *************************************************************************
-Instantiation of Modules
+Instantiation
 *************************************************************************
 */
 
-Layer1Calc STAGE_1(
+inputSRAM INPUTS(
 .clk(clk),
-.reset(l1reset), //verify this is the correct reset
-.pixels(q_w1),
-.weight(weight1),
+.q(q_input)
+);
+
+Layer1Calc STAGE1(
+.clk(clk),
+.globalReset(reset),
+.MAC_reset(MAC_reset),
+.pixels(q_input),
+.weight(w1),
 .column(column)
 );
 
-assign lreset = l1reset | reset;
-    
-controller CNTRL(
+controller CONTROL(
 .clk(clk),
 .reset(reset),
-.MAC_reset(lreset), //0: add to partial sum. 1: add to 0 (clearing)
-.reg_holder_in(routeDataRegWrEn),
-.reg_holder_mux(routeDataRegWrSel),
-.reg_holder_addr(routeDataRegAddr),
-.LUT_mux(routeDataOutMuxSel),
-.weight2_addr(addr),
+.MAC_reset(MAC_reset),
+.reg_holder_in(reg_holder_in),
+.reg_holder_mux(reg_holder_mux),
+.reg_holder_addr(reg_holder_addr),
+.LUT_mux(LUT_mux),
+.weight2_addr(weight2_addr),
 .weight2_loadNextRow(weight2_loadNextRow),
-.GSRAM_addr_row(row),
-.GSRAM_addr_col(col),
-.GSRAM_in(we),
-.GSRAM_mux(gSramMuxSel)
+.GSRAM_addr_row(GSRAM_addr_row),
+.GSRAM_addr_col(GSRAM_addr_col),
+.GSRAM_in(GSRAM_in),
+.GSRAM_mux(GSRAM_mux)
 );
 
+w2SRAM WEIGHT_2(
+.clk(clk),
+.addr(weight2_addr),
+.q(q_w2)
+);
 
-RouteData ROUTEDATA(
+RouteData ROUTE(
 .clk(clk),
 .M1Result(column),
 .SigFeedback(sig_out),
 .SramData(rdata),
-.RegLoadEn(routeDataRegWrEn),
-.RegLoadSel(routeDataRegWrSel),
-.Addr(routeDataRegAddr),
-.DataOutSel(routeDataOutMuxSel),
-.DataOut(sig_in),
-.DataToM2(m2DataIn)
+.RegLoadEn(reg_holder_in),
+.RegLoadSel(reg_holder_mux),
+.Addr(reg_holder_addr),
+.DataOutSel(LUT_mux),
+.DataOut(DataOut),
+.DataToM2(DataToM2)
 );
 
-
-inputSRAM INPUTS(
+Sigmoid SIG(
 .clk(clk),
-.q(q_w1)
-);
-
-
-w2SRAM WEIGHT_2(
-.clk(clk),
-.addr(addr),
-.q(q_w2)
-);
-
-
-gSRAM ANSWER(
-.clk(clk),
-.we(we),
-.row(row),
-.col(col),
-//.wdata(wdata),
-.m2result(m2result),
-.lutdata(sig_out),
-.inmuxsel(gSramMuxSel),
-.rdata(rdata)
-);
-
-
-Sigmoid SIGMOID(
-.clk(clk),
-.sig_in(sig_in),
+.sig_in(DataOut),
 .sig_out(sig_out)
 );
 
+gSRAM GSRAM(
+.clk(clk),
+.we(GSRAM_in),
+.row(GSRAM_addr_row),
+.col(GSRAM_addr_col),
+.m2result(m2result),
+.lutdata(sig_out),
+.inmuxsel(GSRAM_mux),
+.rdata(rdata),
+.mem0(mem0),
+.mem1(mem1),
+.mem2(mem2),
+.mem3(mem3),
+.mem4(mem4),
+.mem5(mem5),
+.mem6(mem6),
+.mem7(mem7),
+.mem8(mem8),
+.mem9(mem9)
+);
 
-always @ (q_w2, rdata, m2DataIn) begin
-    m2product = q_w2 * m2DataIn;
-    m2result = rdata + m2product[23:8];
-end
+
+/*
+*************************************************************************
+STAGE 2
+*************************************************************************
+*/
+
+//Multiply and add
+wire [31:0] product;
+assign product = q_w2 * DataToM2;
+assign m2result = product[23:8] + rdata;
+
+
+
 
 endmodule
-
-

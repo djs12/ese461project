@@ -1,11 +1,14 @@
-module Layer1Calc(clk, reset, pixels, weight, column);
+module Layer1Calc(clk, globalReset, MAC_reset, pixels, weight, column);
 
-input clk, reset;
+input clk, globalReset, MAC_reset;
 input [15:0]  weight;
 input [159:0] pixels;
 output [159:0] column;
 
 reg [159:0] add_in;
+
+wire reset;
+or myOR(reset,globalReset,MAC_reset);
 
 Mac M1(clk, pixels[15:0], weight, add_in[15:0], column[15:0]);
 Mac M2(clk, pixels[31:16], weight, add_in[31:16], column[31:16]);
@@ -49,4 +52,5 @@ begin
 end
 
 endmodule   
+
 

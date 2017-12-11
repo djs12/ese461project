@@ -17,10 +17,10 @@ reg [15:0] mem_i [9:0];
  
 always @ (posedge clk)
 begin
-  q <= {mem_i[0],mem_i[1],mem_i[2],mem_i[3],mem_i[4],mem_i[5],mem_i[6],mem_i[7],mem_i[8],mem_i[9]};
-
+  q <= {mem_i[9],mem_i[8],mem_i[7],mem_i[6],mem_i[5],mem_i[4],mem_i[3],mem_i[2],mem_i[1],mem_i[0]};
 end
 
 
 endmodule
+
 
