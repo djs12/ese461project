@@ -77,6 +77,7 @@ wire routeDataRegWrEn;
 wire routeDataRegWrSel;
 wire routeDataOutMuxSel;
 wire [3:0] routeDataRegAddr;
+wire stage2Gate;
 
 /*
 *************************************************************************
@@ -112,7 +113,8 @@ controller CNTRL(
 .GSRAM_addr_row(row),
 .GSRAM_addr_col(col),
 .GSRAM_in(we),
-.GSRAM_mux(gSramMuxSel)
+.GSRAM_mux(gSramMuxSel),
+.stage2_gate(stage2Gate)
 );
 
 RouteData ROUTEDATA(
@@ -131,6 +133,7 @@ RouteData ROUTEDATA(
 w2SRAM WEIGHT_2(
 .clk(clk),
 .we(w2SramWeOffChip),
+//.gate(stage2Gate),
 .data(weight2),
 .addr(w2Addr),
 .q(q_w2)
@@ -139,6 +142,7 @@ w2SRAM WEIGHT_2(
 gSRAM ANSWER(
 .clk(clk),
 .we(we),
+.gate(stage2Gate),
 .row(row),
 .col(col),
 .m2result(m2result),

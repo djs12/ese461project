@@ -18,7 +18,8 @@ module controller(
     output reg [3:0] GSRAM_addr_row, // 0~9
     output reg [3:0] GSRAM_addr_col, // 0~9
     output reg GSRAM_in,
-    output reg GSRAM_mux
+    output reg GSRAM_mux,
+    output reg stage2_gate
     );
 
 reg [9:0] count_layer1_784D, count_layer1_784Q;
@@ -32,6 +33,7 @@ parameter IDLE=0, REG=1, REG_TO_LUT=2, LUT_TO_REG=3, REG_TO_MAC=4, TRANS_TO_GSRA
 
 always @ * begin 
     //default values
+    stage2_gate = 1;
     nextState = currentState;
     count_layer1_784D = count_layer1_784Q + 1;
     count_layer1_200D = count_layer1_200Q;
@@ -56,6 +58,7 @@ always @ * begin
 
     case (currentState)
     IDLE: begin
+        stage2_gate = 0;
         GSRAM_in = 0;
         if (count_layer1_784Q == 0) begin
             MAC_reset = 1;
@@ -72,6 +75,7 @@ always @ * begin
     end
     
     REG: begin
+        stage2_gate = 0;
         MAC_reset = 1;
         reg_holder_in = 1;
         reg_holder_mux = 0; //load from MACs
@@ -81,12 +85,14 @@ always @ * begin
     end
     
     REG_TO_LUT: begin
+        stage2_gate = 0;
         LUT_mux = 0; // load from reg_holder
         reg_holder_addr = count_20Q[4:1];
         nextState = LUT_TO_REG;
     end
     
     LUT_TO_REG: begin
+        stage2_gate = 0;
         reg_holder_in = count_20Q[0];
         reg_holder_mux = 1; // load from LUT
         reg_holder_addr = count_20Q[4:1];

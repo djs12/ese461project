@@ -1,6 +1,7 @@
 module gSRAM(
 clk,
 we,
+gate,
 row,
 col,
 //wdata, //write data
@@ -10,7 +11,7 @@ inmuxsel,
 rdata  //read data
 );
 
-input clk, we, inmuxsel;
+input clk, we, inmuxsel, gate;
 input [3:0] row, col;
 //input [15:0] wdata;
 input [15:0] lutdata;
@@ -19,6 +20,11 @@ output [15:0] rdata;
 
 reg [15:0] rdata;
 reg [15:0] wdata;
+
+wire ram_gate;
+
+assign ram_gate = gate & clk;
+
 
 //2D array 10 by 10 composed of 16 bit elements
 //Row major order
@@ -48,7 +54,7 @@ begin
    endcase
 end
 
-always @ (posedge clk)
+always @ (posedge ram_gate)
 begin
   
   if(we == 1'b1) begin
