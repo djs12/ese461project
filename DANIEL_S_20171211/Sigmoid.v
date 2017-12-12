@@ -14,20 +14,20 @@ reg  [15:0] sig_out;
 reg sign_bit;
 
 
-always @ * //(sig_in, lut_out, sign_bit)
+always @ (sig_in, lut_out, sign_bit)
 begin
    case(sig_in[15]) 
    0: begin
        lut_in = sig_in;
       end
    1: begin
-       lut_in = ~sig_in + 4'h0001;
+       lut_in = ~sig_in + 16'h0001;
       end
    endcase
 
    case(sign_bit) 
    0: begin
-       sig_out = (4'h0100-lut_out)&4'h00ff;
+       sig_out = /*(*/16'h0100 - lut_out;//)&4'h00ff;
       end
    1: begin
        sig_out = lut_out;
