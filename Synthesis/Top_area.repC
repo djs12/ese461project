@@ -1,0 +1,94 @@
+ 
+****************************************
+Report : area
+Design : Top
+Version: J-2014.09-SP5
+Date   : Mon Dec 11 19:44:28 2017
+****************************************
+
+Library(s) Used:
+
+    vtvt_tsmc180 (File: /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db)
+
+Number of ports:                          217
+Number of nets:                         19836
+Number of cells:                        18009
+Number of combinational cells:          15506
+Number of sequential cells:              2503
+Number of macros/black boxes:               0
+Number of buf/inv:                       1494
+Number of references:                      20
+
+Combinational area:            1019563.863741
+Buf/Inv area:                    43220.150534
+Noncombinational area:          436830.063461
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1456393.927202
+Total area:                 undefined
+1
+ 
+****************************************
+Report : reference
+Design : Top
+Version: J-2014.09-SP5
+Date   : Mon Dec 11 19:44:28 2017
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+ab_or_c_or_d       vtvt_tsmc180
+                                 82.668602       7    578.680214  
+and2_1             vtvt_tsmc180
+                                 51.029999      99   5051.969879  
+and3_1             vtvt_tsmc180
+                                 55.112400     102   5621.464806  
+and4_1             vtvt_tsmc180
+                                 64.297798       3    192.893394  
+buf_1              vtvt_tsmc180
+                                 45.926998      95   4363.064823  
+dp_1               vtvt_tsmc180
+                                174.522598    2503  436830.063461 n
+fulladder          vtvt_tsmc180
+                                202.078796    1629  329186.359314 r
+inv_1              vtvt_tsmc180
+                                 27.774900    1399  38857.085711  
+mux2_1             vtvt_tsmc180
+                                 73.483200    3465  254619.288254 
+nand2_1            vtvt_tsmc180
+                                 36.741600    3745  137597.292137 
+nand3_1            vtvt_tsmc180
+                                 45.926998     259  11895.092518  
+nand4_1            vtvt_tsmc180
+                                 55.112400     128   7054.387207  
+nor2_1             vtvt_tsmc180
+                                 36.741600    1654  60770.606461  
+nor3_1             vtvt_tsmc180
+                                 45.926998     378  17360.405296  
+nor4_1             vtvt_tsmc180
+                                 55.112400      57   3141.406803  
+not_ab_or_c_or_d   vtvt_tsmc180
+                                 64.297798      97   6236.886421  
+or2_1              vtvt_tsmc180
+                                 45.926998    1663  76376.597904  
+or4_1              vtvt_tsmc180
+                                 64.297798       3    192.893394  
+xnor2_1            vtvt_tsmc180
+                                 91.853996      76   6980.903717  
+xor2_1             vtvt_tsmc180
+                                 82.668602     647  53486.585487  
+-----------------------------------------------------------------------------
+Total 20 references                                 1456393.927202
+1
