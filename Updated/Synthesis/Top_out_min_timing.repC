@@ -1,0 +1,592 @@
+Warning: Worst timing paths might not be returned. (TIM-104)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 3
+        -greater_path 0.00
+        -max_paths 1000000
+Design : Top
+Version: J-2014.09-SP5
+Date   : Tue Dec 12 01:57:14 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: nom_pvt   Library: vtvt_tsmc180
+Wire Load Model Mode: top
+
+  Startpoint: ANSWER/rdata_reg[14]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[14] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[14]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[14]/q (dp_1)          288.15     288.15 r
+  rdata[14] (out)                          0.00     288.15 r
+  data arrival time                                 288.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[12]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[12] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[12]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[12]/q (dp_1)          288.15     288.15 r
+  rdata[12] (out)                          0.00     288.15 r
+  data arrival time                                 288.15
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[10] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[10]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[10]/q (dp_1)          301.46     301.46 r
+  rdata[10] (out)                          0.00     301.46 r
+  data arrival time                                 301.46
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[1] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[1]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[1]/q (dp_1)           301.46     301.46 r
+  rdata[1] (out)                           0.00     301.46 r
+  data arrival time                                 301.46
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[13]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[13] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[13]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[13]/q (dp_1)          301.92     301.92 r
+  rdata[13] (out)                          0.00     301.92 r
+  data arrival time                                 301.92
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[6] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[6]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[6]/q (dp_1)           301.92     301.92 r
+  rdata[6] (out)                           0.00     301.92 r
+  data arrival time                                 301.92
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[3] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[3]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[3]/q (dp_1)           301.92     301.92 r
+  rdata[3] (out)                           0.00     301.92 r
+  data arrival time                                 301.92
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[0] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[0]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[0]/q (dp_1)           302.21     302.21 r
+  rdata[0] (out)                           0.00     302.21 r
+  data arrival time                                 302.21
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[15]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[15] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[15]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[15]/q (dp_1)          304.65     304.65 r
+  rdata[15] (out)                          0.00     304.65 r
+  data arrival time                                 304.65
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[7] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[7]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[7]/q (dp_1)           318.25     318.25 r
+  rdata[7] (out)                           0.00     318.25 r
+  data arrival time                                 318.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[5] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[5]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[5]/q (dp_1)           318.25     318.25 r
+  rdata[5] (out)                           0.00     318.25 r
+  data arrival time                                 318.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[4] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[4]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[4]/q (dp_1)           318.25     318.25 r
+  rdata[4] (out)                           0.00     318.25 r
+  data arrival time                                 318.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[2] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[2]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[2]/q (dp_1)           318.25     318.25 r
+  rdata[2] (out)                           0.00     318.25 r
+  data arrival time                                 318.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[11] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[11]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[11]/q (dp_1)          318.53     318.53 r
+  rdata[11] (out)                          0.00     318.53 r
+  data arrival time                                 318.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[9] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[9]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[9]/q (dp_1)           326.76     326.76 r
+  rdata[9] (out)                           0.00     326.76 r
+  data arrival time                                 326.76
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[8] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[8]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[8]/q (dp_1)           335.06     335.06 r
+  rdata[8] (out)                           0.00     335.06 r
+  data arrival time                                 335.06
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[14]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[14] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[14]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[14]/q (dp_1)          359.66     359.66 f
+  rdata[14] (out)                          0.00     359.66 f
+  data arrival time                                 359.66
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[12]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[12] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[12]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[12]/q (dp_1)          359.66     359.66 f
+  rdata[12] (out)                          0.00     359.66 f
+  data arrival time                                 359.66
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[10]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[10] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[10]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[10]/q (dp_1)          370.75     370.75 f
+  rdata[10] (out)                          0.00     370.75 f
+  data arrival time                                 370.75
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[1] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[1]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[1]/q (dp_1)           370.75     370.75 f
+  rdata[1] (out)                           0.00     370.75 f
+  data arrival time                                 370.75
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[13]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[13] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[13]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[13]/q (dp_1)          371.13     371.13 f
+  rdata[13] (out)                          0.00     371.13 f
+  data arrival time                                 371.13
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[6] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[6]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[6]/q (dp_1)           371.13     371.13 f
+  rdata[6] (out)                           0.00     371.13 f
+  data arrival time                                 371.13
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[3] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[3]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[3]/q (dp_1)           371.13     371.13 f
+  rdata[3] (out)                           0.00     371.13 f
+  data arrival time                                 371.13
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[0] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[0]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[0]/q (dp_1)           371.37     371.37 f
+  rdata[0] (out)                           0.00     371.37 f
+  data arrival time                                 371.37
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[15]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[15] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[15]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[15]/q (dp_1)          373.41     373.41 f
+  rdata[15] (out)                          0.00     373.41 f
+  data arrival time                                 373.41
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[7] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[7]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[7]/q (dp_1)           384.74     384.74 f
+  rdata[7] (out)                           0.00     384.74 f
+  data arrival time                                 384.74
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[5]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[5] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[5]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[5]/q (dp_1)           384.74     384.74 f
+  rdata[5] (out)                           0.00     384.74 f
+  data arrival time                                 384.74
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[4] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[4]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[4]/q (dp_1)           384.74     384.74 f
+  rdata[4] (out)                           0.00     384.74 f
+  data arrival time                                 384.74
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[2] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[2]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[2]/q (dp_1)           384.74     384.74 f
+  rdata[2] (out)                           0.00     384.74 f
+  data arrival time                                 384.74
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[11]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[11] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[11]/ck (dp_1)           0.00 #     0.00 r
+  ANSWER/rdata_reg[11]/q (dp_1)          384.98     384.98 f
+  rdata[11] (out)                          0.00     384.98 f
+  data arrival time                                 384.98
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[9]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[9] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[9]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[9]/q (dp_1)           391.84     391.84 f
+  rdata[9] (out)                           0.00     391.84 f
+  data arrival time                                 391.84
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: ANSWER/rdata_reg[8]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rdata[8] (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  ANSWER/rdata_reg[8]/ck (dp_1)            0.00 #     0.00 r
+  ANSWER/rdata_reg[8]/q (dp_1)           398.75     398.75 f
+  rdata[8] (out)                           0.00     398.75 f
+  data arrival time                                 398.75
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: CNTRL/count_20Q_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: weight2_loadNextRow
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  CNTRL/count_20Q_reg[0]/ck (dp_1)         0.00 #     0.00 r
+  CNTRL/count_20Q_reg[0]/q (dp_1)        192.08     192.08 r
+  U4739/op (nand3_1)                     164.77     356.85 f
+  U4740/op (nand2_1)                     221.38     578.23 r
+  U4749/op (and2_1)                      347.67     925.90 r
+  weight2_loadNextRow (out)                0.00     925.90 r
+  data arrival time                                 925.90
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: CNTRL/currentState_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: weight2_loadNextRow
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  CNTRL/currentState_reg[1]/ck (dp_1)      0.00 #     0.00 r
+  CNTRL/currentState_reg[1]/q (dp_1)     205.00     205.00 r
+  U4739/op (nand3_1)                     169.47     374.47 f
+  U4740/op (nand2_1)                     221.38     595.85 r
+  U4749/op (and2_1)                      347.67     943.53 r
+  weight2_loadNextRow (out)                0.00     943.53 r
+  data arrival time                                 943.53
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+  Startpoint: CNTRL/count_20Q_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: weight2_loadNextRow
+            (output port)
+  Path Group: (none)
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  CNTRL/count_20Q_reg[0]/ck (dp_1)         0.00 #     0.00 r
+  CNTRL/count_20Q_reg[0]/q (dp_1)        278.03     278.03 f
+  U4739/op (nand3_1)                      93.63     371.65 r
+  U4740/op (nand2_1)                     269.31     640.96 f
+  U4749/op (and2_1)                      330.29     971.25 f
+  weight2_loadNextRow (out)                0.00     971.25 f
+  data arrival time                                 971.25
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
