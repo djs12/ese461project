@@ -8,7 +8,7 @@ Report : timing
         -max_paths 20
 Design : Top
 Version: J-2014.09-SP5
-Date   : Tue Dec 12 01:57:14 2017
+Date   : Tue Dec 12 02:22:58 2017
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -16,9 +16,9 @@ Date   : Tue Dec 12 01:57:14 2017
 Operating Conditions: nom_pvt   Library: vtvt_tsmc180
 Wire Load Model Mode: top
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[3][6][15]
+  Endpoint: ANSWER/mem_reg[4][3][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -27,75 +27,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11529/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[3][6][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11681/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[4][3][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[3][6][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[4][3][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[3][8][15]
+  Endpoint: ANSWER/mem_reg[4][7][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -104,75 +109,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11531/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[3][8][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11685/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[4][7][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[3][8][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[4][7][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[3][9][15]
+  Endpoint: ANSWER/mem_reg[6][0][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -181,75 +191,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11532/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[3][9][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11698/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[6][0][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[3][9][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[6][0][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[5][3][15]
+  Endpoint: ANSWER/mem_reg[6][1][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -258,227 +273,78 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11546/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[5][3][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11699/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[6][1][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[5][3][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[6][1][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[6][3][15]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11556/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[6][3][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
-
-  clock clk (rise edge)                50000.00   50000.00
-  clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[6][3][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
-  -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
-  -----------------------------------------------------------
-  slack (MET)                                     32901.89
-
-
-  Startpoint: WEIGHT_2/q_reg[3]
-              (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[6][4][15]
-            (rising edge-triggered flip-flop clocked by clk)
-  Path Group: clk
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clk (rise edge)                    0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11557/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[6][4][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
-
-  clock clk (rise edge)                50000.00   50000.00
-  clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[6][4][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
-  -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
-  -----------------------------------------------------------
-  slack (MET)                                     32901.89
-
-
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
   Endpoint: ANSWER/mem_reg[6][5][15]
             (rising edge-triggered flip-flop clocked by clk)
@@ -489,75 +355,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11558/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[6][5][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11703/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[6][5][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
   ANSWER/mem_reg[6][5][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[6][6][15]
+  Endpoint: ANSWER/mem_reg[7][0][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -566,75 +437,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11559/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[6][6][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11708/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[7][0][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[6][6][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[7][0][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][2][15]
+  Endpoint: ANSWER/mem_reg[7][1][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -643,75 +519,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11565/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][2][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11709/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[7][1][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][2][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[7][1][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.85   49856.15
+  data required time                              49856.15
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.15
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.40
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][3][15]
+  Endpoint: ANSWER/mem_reg[5][2][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -720,75 +601,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11566/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][3][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11690/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[5][2][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][3][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[5][2][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.84   49856.16
+  data required time                              49856.16
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.16
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.41
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][4][15]
+  Endpoint: ANSWER/mem_reg[3][6][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -797,75 +683,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11567/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][4][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11674/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[3][6][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][4][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[3][6][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.84   49856.16
+  data required time                              49856.16
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.16
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.41
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][5][15]
+  Endpoint: ANSWER/mem_reg[3][7][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -874,75 +765,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11568/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][5][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11675/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[3][7][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][5][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[3][7][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.84   49856.16
+  data required time                              49856.16
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.16
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.41
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][6][15]
+  Endpoint: ANSWER/mem_reg[1][0][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -951,75 +847,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11569/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][6][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11648/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[1][0][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][6][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[1][0][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.83   49856.17
+  data required time                              49856.17
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.17
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.42
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][7][15]
+  Endpoint: ANSWER/mem_reg[1][1][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1028,75 +929,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11570/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][7][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11649/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[1][1][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][7][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[1][1][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.83   49856.17
+  data required time                              49856.17
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.17
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.42
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][8][15]
+  Endpoint: ANSWER/mem_reg[0][3][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1105,75 +1011,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11571/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][8][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11641/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][3][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][8][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[0][3][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.45
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[7][9][15]
+  Endpoint: ANSWER/mem_reg[0][5][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1182,75 +1093,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11572/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[7][9][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11643/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][5][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[7][9][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.59   49848.41
-  data required time                              49848.41
+  ANSWER/mem_reg[0][5][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.41
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.89
+  slack (MET)                                     32761.45
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[4][0][15]
+  Endpoint: ANSWER/mem_reg[0][6][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1259,75 +1175,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11533/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[4][0][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11644/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][6][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[4][0][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.58   49848.42
-  data required time                              49848.42
+  ANSWER/mem_reg[0][6][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.42
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.90
+  slack (MET)                                     32761.45
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[4][1][15]
+  Endpoint: ANSWER/mem_reg[0][7][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1336,75 +1257,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11534/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[4][1][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11645/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][7][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[4][1][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.58   49848.42
-  data required time                              49848.42
+  ANSWER/mem_reg[0][7][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.42
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.90
+  slack (MET)                                     32761.45
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[4][2][15]
+  Endpoint: ANSWER/mem_reg[0][2][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1413,75 +1339,80 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11535/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[4][2][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11640/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][2][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[4][2][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.58   49848.42
-  data required time                              49848.42
+  ANSWER/mem_reg[0][2][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.42
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.90
+  slack (MET)                                     32761.45
 
 
-  Startpoint: WEIGHT_2/q_reg[3]
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: ANSWER/mem_reg[4][6][15]
+  Endpoint: ANSWER/mem_reg[0][4][15]
             (rising edge-triggered flip-flop clocked by clk)
   Path Group: clk
   Path Type: max
@@ -1490,70 +1421,239 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clk (rise edge)                    0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  WEIGHT_2/q_reg[3]/ck (dp_1)              0.00 #     0.00 r
-  WEIGHT_2/q_reg[3]/q (dp_1)             370.74     370.74 f
-  U8790/op (inv_1)                       265.06     635.80 r
-  U8808/op (nor2_1)                      137.68     773.48 f
-  U8809/op (or2_1)                       134.13     907.62 f
-  U8811/op (nand2_1)                      66.15     973.76 r
-  U8812/op (nor2_1)                       99.03    1072.79 f
-  U8814/op (xor2_1)                      181.58    1254.37 r
-  U8913/co (fulladder)                  1853.21    3107.58 r
-  U9245/co (fulladder)                  1275.44    4383.02 r
-  U9420/s (fulladder)                   1021.27    5404.29 f
-  U9357/op (inv_1)                       180.10    5584.39 r
-  U9358/op (nor2_1)                       97.09    5681.48 f
-  U9359/op (or2_1)                       160.59    5842.07 f
-  U9361/op (nand2_1)                      65.47    5907.54 r
-  U9416/op (nor2_1)                      109.37    6016.91 f
-  U9582/op (or2_1)                       139.87    6156.78 f
-  U9583/op (nand2_1)                      87.59    6244.36 r
-  U9749/co (fulladder)                   275.08    6519.44 r
-  U9751/op (nor2_1)                      134.40    6653.84 f
-  U9863/op (nor2_1)                      105.05    6758.89 r
-  U9864/op (nor2_1)                      110.64    6869.53 f
-  U9930/op (nor2_1)                      116.18    6985.71 r
-  U10045/op (or2_1)                       98.09    7083.80 r
-  U10046/op (nand2_1)                     81.96    7165.77 f
-  U10114/op (nor2_1)                     120.77    7286.54 r
-  U10284/op (or2_1)                       98.10    7384.64 r
-  U10285/op (nand2_1)                    110.31    7494.96 f
-  U10398/co (fulladder)                  295.73    7790.69 f
-  U10461/op (nor2_1)                     157.28    7947.97 r
-  U10619/op (or2_1)                       87.84    8035.81 r
-  U10620/op (nand2_1)                     87.96    8123.77 f
-  U10623/op (nor2_1)                     122.21    8245.98 r
-  U10772/op (or2_1)                       88.53    8334.51 r
-  U10773/op (nand2_1)                     85.61    8420.12 f
-  U10775/op (or2_1)                      147.69    8567.81 f
-  U10881/op (nand2_1)                     50.24    8618.05 r
-  U10882/op (nand2_1)                    138.25    8756.30 f
-  U11073/co (fulladder)                  339.16    9095.46 f
-  U11216/co (fulladder)                  443.08    9538.54 f
-  U11350/co (fulladder)                  586.72   10125.26 f
-  U11472/co (fulladder)                  491.03   10616.29 f
-  U11474/op (xor2_1)                     184.09   10800.39 r
-  U11478/op (xor2_1)                     161.33   10961.71 f
-  U11482/op (xor2_1)                     181.94   11143.66 f
-  U11486/op (xor2_1)                     880.85   12024.51 f
-  U11487/op (xor2_1)                    1490.93   13515.44 r
-  U11488/op (xor2_1)                     406.24   13921.68 r
-  U11490/op (not_ab_or_c_or_d)          2145.32   16067.01 f
-  U11528/op (buf_1)                      663.12   16730.13 f
-  U11539/op (mux2_1)                     216.39   16946.52 f
-  ANSWER/mem_reg[4][6][15]/ip (dp_1)       0.00   16946.52 f
-  data arrival time                               16946.52
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11642/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][4][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
 
   clock clk (rise edge)                50000.00   50000.00
   clock network delay (ideal)              0.00   50000.00
-  ANSWER/mem_reg[4][6][15]/ck (dp_1)       0.00   50000.00 r
-  library setup time                    -151.58   49848.42
-  data required time                              49848.42
+  ANSWER/mem_reg[0][4][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.80   49856.20
+  data required time                              49856.20
   -----------------------------------------------------------
-  data required time                              49848.42
-  data arrival time                               -16946.52
+  data required time                              49856.20
+  data arrival time                               -17094.75
   -----------------------------------------------------------
-  slack (MET)                                     32901.90
+  slack (MET)                                     32761.45
+
+
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ANSWER/mem_reg[0][0][15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11638/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][0][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  ANSWER/mem_reg[0][0][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.78   49856.22
+  data required time                              49856.22
+  -----------------------------------------------------------
+  data required time                              49856.22
+  data arrival time                               -17094.75
+  -----------------------------------------------------------
+  slack (MET)                                     32761.47
+
+
+  Startpoint: ROUTEDATA/DataToM2_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ANSWER/mem_reg[0][8][15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ROUTEDATA/DataToM2_reg[4]/ck (dp_1)      0.00       0.00 r
+  ROUTEDATA/DataToM2_reg[4]/q (dp_1)     372.84     372.84 f
+  U4717/op (inv_1)                       266.75     639.60 r
+  U8998/op (nor2_1)                      137.96     777.55 f
+  U8999/op (or2_1)                       140.50     918.05 f
+  U9001/op (nand2_1)                      49.82     967.88 r
+  U9002/op (or2_1)                       105.07    1072.94 r
+  U9017/op (xor2_1)                      161.22    1234.16 f
+  U9091/co (fulladder)                  2840.10    4074.26 f
+  U9388/co (fulladder)                  1791.33    5865.58 f
+  U9506/s (fulladder)                   1110.56    6976.14 f
+  U9389/op (nor2_1)                      339.13    7315.28 r
+  U9508/op (inv_1)                        48.54    7363.82 f
+  U9510/op (nand2_1)                      75.88    7439.70 r
+  U9565/op (nor2_1)                      105.33    7545.03 f
+  U9721/op (nor2_1)                       96.47    7641.50 r
+  U9722/op (nor2_1)                      143.37    7784.87 f
+  U9725/op (nor2_1)                      126.87    7911.74 r
+  U9904/op (or2_1)                        90.73    8002.47 r
+  U9905/op (nand2_1)                      83.66    8086.12 f
+  U9906/op (or2_1)                       149.13    8235.25 f
+  U10078/op (nand2_1)                     50.17    8285.43 r
+  U10079/op (nand2_1)                    112.66    8398.09 f
+  U10080/op (nor2_1)                     125.46    8523.55 r
+  U10194/op (or2_1)                       98.72    8622.28 r
+  U10195/op (nand2_1)                     81.55    8703.83 f
+  U10260/op (nand2_1)                     76.60    8780.42 r
+  U10434/op (nand2_1)                     79.04    8859.47 f
+  U10435/op (nand2_1)                     67.12    8926.59 r
+  U10437/op (nor2_1)                     104.22    9030.81 f
+  U10606/op (or2_1)                      135.11    9165.92 f
+  U10607/op (nand2_1)                     62.04    9227.96 r
+  U10609/op (nand2_1)                     94.54    9322.50 f
+  U10765/op (nand2_1)                     64.61    9387.11 r
+  U10766/op (nand2_1)                     90.80    9477.91 f
+  U10769/op (nor2_1)                     120.38    9598.29 r
+  U10917/op (or2_1)                       88.27    9686.55 r
+  U10918/op (nand2_1)                     83.74    9770.30 f
+  U10920/op (or2_1)                      147.38    9917.68 f
+  U11026/op (nand2_1)                     50.33    9968.01 r
+  U11027/op (nand2_1)                    139.19   10107.20 f
+  U11179/co (fulladder)                  318.96   10426.16 f
+  U11222/op (or2_1)                      190.72   10616.88 f
+  U11328/op (nand2_1)                     53.73   10670.60 r
+  U11329/op (nand2_1)                    139.09   10809.70 f
+  U11496/co (fulladder)                  384.02   11193.71 f
+  U11602/co (fulladder)                  512.78   11706.50 f
+  U11603/op (xor2_1)                     176.31   11882.80 r
+  U11604/op (xor2_1)                     158.37   12041.17 r
+  U11605/op (mux2_1)                     204.71   12245.88 f
+  U11610/op (xor2_1)                     154.33   12400.21 r
+  U11634/op (nor2_1)                     813.69   13213.91 f
+  U11635/op (not_ab_or_c_or_d)          2410.43   15624.34 r
+  U11636/op (buf_1)                      830.03   16454.37 r
+  U11637/op (buf_1)                      470.90   16925.28 r
+  U11646/op (mux2_1)                     169.47   17094.75 r
+  ANSWER/mem_reg[0][8][15]/ip (dp_1)       0.00   17094.75 r
+  data arrival time                               17094.75
+
+  clock clk (rise edge)                50000.00   50000.00
+  clock network delay (ideal)              0.00   50000.00
+  ANSWER/mem_reg[0][8][15]/ck (dp_1)       0.00   50000.00 r
+  library setup time                    -143.78   49856.22
+  data required time                              49856.22
+  -----------------------------------------------------------
+  data required time                              49856.22
+  data arrival time                               -17094.75
+  -----------------------------------------------------------
+  slack (MET)                                     32761.47
 
 
 1

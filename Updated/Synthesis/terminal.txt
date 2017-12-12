@@ -50,7 +50,7 @@ clk
 # Use multiple cores               # 
 ####################################
 set_host_options -max_cores 16
-Warning: You requested 16 cores. However, load on host linuxlab005.seas.wustl.edu is 2.09. Tool will ignore the request and use 14 cores. (UIO-231)
+Warning: You requested 16 cores. However, load on host linuxlab005.seas.wustl.edu is 2.73. Tool will ignore the request and use 14 cores. (UIO-231)
 1
 ####################################
 # Setup library                    # 
@@ -105,12 +105,12 @@ Compiling source file ../Top.v
 Compiling source file ../controller.v
 Compiling source file ../gSRAM.v
 Compiling source file ../Layer1Calc.v
-Warning:  ../gSRAM.v:43: The statements in initial blocks are ignored. (VER-281)
+Warning:  ../gSRAM.v:49: The statements in initial blocks are ignored. (VER-281)
 Compiling source file ../Mac.v
 Compiling source file ../RouteData.v
 Compiling source file ../Sigmoid.v
 Compiling source file ../w2SRAM.v
-Warning:  ../w2SRAM.v:15: Port q is implicitly typed  (VER-987)
+Warning:  ../w2SRAM.v:16: Port q is implicitly typed  (VER-987)
 Compiling source file ../inputSRAM.v
 Warning:  ../inputSRAM.v:12: Port q is implicitly typed  (VER-987)
 Presto compilation completed successfully.
@@ -124,14 +124,14 @@ Loading db file '/project/linuxlab/synopsys/syncore/libraries/syn/standard.sldb'
   Loading link library 'vtvt_tsmc180'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Warning:  ../Top.v:158: signed to unsigned part selection occurs. (VER-318)
+Warning:  ../Top.v:162: signed to unsigned part selection occurs. (VER-318)
 
-Statistics for case statements in always block at line 156 in file
+Statistics for case statements in always block at line 160 in file
 	'../Top.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           160            |    auto/auto     |
+|           164            |    auto/auto     |
 ===============================================
 Presto compilation completed successfully.
 Elaborated 1 design.
@@ -169,16 +169,16 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'controller'. (HDL-193)
 
-Statistics for case statements in always block at line 33 in file
+Statistics for case statements in always block at line 34 in file
 	'../controller.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            57            |    auto/auto     |
+|            59            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine controller line 206 in file
+	in routine controller line 212 in file
 		'../controller.v'.
 =================================================================================
 |     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -233,7 +233,7 @@ Presto compilation completed successfully.
 Information: Building the design 'w2SRAM'. (HDL-193)
 
 Inferred memory devices in process
-	in routine w2SRAM line 21 in file
+	in routine w2SRAM line 26 in file
 		'../w2SRAM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -253,16 +253,16 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'gSRAM'. (HDL-193)
 
-Statistics for case statements in always block at line 43 in file
+Statistics for case statements in always block at line 49 in file
 	'../gSRAM.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            45            |    auto/auto     |
+|            51            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
-	in routine gSRAM line 51 in file
+	in routine gSRAM line 57 in file
 		'../gSRAM.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -764,7 +764,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     J-2014.09-SP5
-Date:        Tue Dec 12 01:56:15 2017
+Date:        Tue Dec 12 02:22:03 2017
 ****************************************
 
                    Name                                            Total
@@ -773,11 +773,11 @@ Cells                                                               7
     Cells do not drive (LINT-1)                                     7
 --------------------------------------------------------------------------------
 
-Warning: In design 'Top', cell 'CNTRL/C995' does not drive any nets. (LINT-1)
-Warning: In design 'Top', cell 'CNTRL/C994' does not drive any nets. (LINT-1)
-Warning: In design 'Top', cell 'CNTRL/C986' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C999' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C998' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C990' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C980' does not drive any nets. (LINT-1)
 Warning: In design 'Top', cell 'CNTRL/C976' does not drive any nets. (LINT-1)
-Warning: In design 'Top', cell 'CNTRL/C972' does not drive any nets. (LINT-1)
 Warning: In design 'Top', cell 'SIGMOID/B_47' does not drive any nets. (LINT-1)
 Warning: In design 'Top', cell 'SIGMOID/B_46' does not drive any nets. (LINT-1)
 1
@@ -1443,16 +1443,17 @@ Information: The register 'CNTRL/currentState_reg[3]' is a constant and will be 
 
   Beginning Mapping Optimizations  (Ultra High effort)
   -------------------------------
+Information: Updating design information... (UID-85)
   Mapping Optimization (Phase 1)
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:39 1084567.9      0.00       0.0      18.3                              0.0055
-    0:00:39 1084567.9      0.00       0.0      18.3                              0.0055
-    0:00:39 1084567.9      0.00       0.0      18.3                              0.0055
-    0:00:39 1084567.9      0.00       0.0      18.3                              0.0055
+    0:00:36 1086351.1      0.00       0.0       0.0                              0.0055
+    0:00:36 1086351.1      0.00       0.0       0.0                              0.0055
+    0:00:36 1086351.1      0.00       0.0       0.0                              0.0055
+    0:00:36 1086351.1      0.00       0.0       0.0                              0.0055
   Re-synthesis Optimization (Phase 1)
   Re-synthesis Optimization (Phase 2)
   Global Optimization (Phase 1)
@@ -1496,46 +1497,46 @@ Information: The register 'CNTRL/currentState_reg[3]' is a constant and will be 
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:45 1034862.2      0.00       0.0     127.0                              0.0054
+    0:00:41 1035215.9      0.00       0.0      97.3                              0.0054
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:45 1034862.2      0.00       0.0     127.0                              0.0054
-    0:00:45 1034862.2      0.00       0.0     127.0                              0.0054
-    0:00:45 1034862.2      0.00       0.0     127.0                              0.0054
-    0:00:45 1034862.2      0.00       0.0     127.0                              0.0054
-    0:00:46 1034862.2      0.00       0.0     127.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
+    0:00:41 1035215.9      0.00       0.0      97.3                              0.0054
+    0:00:41 1035215.9      0.00       0.0      97.3                              0.0054
+    0:00:41 1035215.9      0.00       0.0      97.3                              0.0054
+    0:00:41 1035215.9      0.00       0.0      97.3                              0.0054
+    0:00:42 1035215.9      0.00       0.0      97.3                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
 
   Beginning Delay Optimization
   ----------------------------
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:42 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:43 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:43 1035215.9      0.00       0.0       0.0                              0.0054
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
-    0:00:47 1034862.2      0.00       0.0       0.0                              0.0054
+    0:00:43 1035215.9      0.00       0.0       0.0                              0.0054
+    0:00:43 1035215.9      0.00       0.0       0.0                              0.0054
 
 
   Beginning Leakage Power Optimization  (max_leakage_power 0)
@@ -1545,7 +1546,7 @@ Information: The register 'CNTRL/currentState_reg[3]' is a constant and will be 
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:49 1034853.3      0.00       0.0       0.0                              0.0054
+    0:00:44 1035207.0      0.00       0.0       0.0                              0.0054
   Global Optimization (Phase 32)
   Global Optimization (Phase 33)
   Global Optimization (Phase 34)
@@ -1558,47 +1559,47 @@ Information: The register 'CNTRL/currentState_reg[3]' is a constant and will be 
   Global Optimization (Phase 41)
   Global Optimization (Phase 42)
   Global Optimization (Phase 43)
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:50 1032573.7      0.00       0.0       0.0                              0.0054
+    0:00:45 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:45 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:45 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
 
                                   TOTAL                                                
    ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
   --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:51 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:51 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:51 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:51 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:52 1032573.7      0.00       0.0       0.0                              0.0054
+    0:00:46 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:47 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:47 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:47 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:47 1032722.3      0.00       0.0       0.0                              0.0054
 
   Beginning Delay Optimization HSVT Pass
   --------------------------------------
-    0:00:52 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:52 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:52 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:52 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:53 1032573.7      0.00       0.0       0.0                              0.0054
-    0:00:53 1032573.7      0.00       0.0       0.0                              0.0054
+    0:00:48 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:48 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:48 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:48 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:49 1032722.3      0.00       0.0       0.0                              0.0054
+    0:00:49 1032722.3      0.00       0.0       0.0                              0.0054
 Loading db file '/project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db'
 
 
@@ -1608,7 +1609,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   Optimization Complete
   ---------------------
 Warning: Design 'Top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
-     Net 'clk': 2360 load(s), 1 driver(s)
+     Net 'ANSWER/ram_gate': 1616 load(s), 1 driver(s)
 Information: State dependent leakage is now switched from off to on.
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 1
@@ -1793,7 +1794,7 @@ report_area
 Report : area
 Design : Top
 Version: J-2014.09-SP5
-Date   : Tue Dec 12 01:57:13 2017
+Date   : Tue Dec 12 02:22:57 2017
 ****************************************
 
 Library(s) Used:
@@ -1801,21 +1802,21 @@ Library(s) Used:
     vtvt_tsmc180 (File: /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db)
 
 Number of ports:                          140
-Number of nets:                         12920
-Number of cells:                        12112
-Number of combinational cells:           9752
+Number of nets:                         12958
+Number of cells:                        12157
+Number of combinational cells:           9797
 Number of sequential cells:              2360
 Number of macros/black boxes:               0
-Number of buf/inv:                        816
+Number of buf/inv:                        807
 Number of references:                      21
 
-Combinational area:             620700.412500
-Buf/Inv area:                    23916.813498
+Combinational area:             620848.982706
+Buf/Inv area:                    23539.774710
 Noncombinational area:          411873.331909
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:               1032573.744410
+Total cell area:               1032722.314615
 Total area:                 undefined
 1
 # reports design database constraints attributes
@@ -1826,7 +1827,7 @@ Report : timing_requirements
         -attributes
 Design : Top
 Version: J-2014.09-SP5
-Date   : Tue Dec 12 01:57:13 2017
+Date   : Tue Dec 12 02:22:57 2017
 ****************************************
 
 1
