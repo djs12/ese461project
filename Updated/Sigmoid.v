@@ -6,11 +6,13 @@ module Sigmoid(clk, sig_in, sig_out);
 
 input clk;
 input  [15:0] sig_in;
-output reg [15:0] sig_out;
+output [15:0] sig_out;
 
 reg  [15:0] lut_out;
 reg  [15:0] lut_in;
+reg  [15:0] sig_out;
 reg sign_bit;
+
 
 always @ (sig_in, lut_out, sign_bit)
 begin
@@ -25,61 +27,61 @@ begin
 
    case(sign_bit) 
    0: begin
-       sig_out = lut_out;
+       sig_out = 16'h0100 - lut_out;//)&4'h00ff;
       end
    1: begin
-       sig_out = 16'h0100 - lut_out;
+       sig_out = lut_out;
       end
    endcase
 end
 
-always @ (posedge clk)
-begin
-   sign_bit <= sig_in[15];
 
-   if(lut_in > 16'b0000011000000000)       begin lut_out <= 16'h0100; end //x > 6
-   else if(lut_in >= 16'b0000010100110011) begin lut_out <= 16'b0000000011111111; end //x >= 5.2
-   else if(lut_in >= 16'b0000010010110011) begin lut_out <= 16'b0000000011111110; end //x >= 4.7
-   else if(lut_in >= 16'b0000010001001101) begin lut_out <= 16'b0000000011111101; end //x >= 4.3 
-   else if(lut_in >= 16'b0000010000011010) begin lut_out <= 16'b0000000011111100; end //x >= 4.1
-   else if(lut_in >= 16'b0000001111100110) begin lut_out <= 16'b0000000011111011; end //x >= 3.9
-   else if(lut_in >= 16'b0000001110110011) begin lut_out <= 16'b0000000011111010; end //x >= 3.7
-   else if(lut_in >= 16'b0000001110011010) begin lut_out <= 16'b0000000011111001; end //x >= 3.6
-   else if(lut_in >= 16'b0000001101100110) begin lut_out <= 16'b0000000011111000; end //x >= 3.4
-   else if(lut_in >= 16'b0000001101001101) begin lut_out <= 16'b0000000011110111; end //x >= 3.3
-   else if(lut_in >= 16'b0000001100110011) begin lut_out <= 16'b0000000011110110; end //x >= 3.2
-   else if(lut_in >= 16'b0000001100011010) begin lut_out <= 16'b0000000011110101; end //x >= 3.1
-   else if(lut_in >= 16'b0000001100000000) begin lut_out <= 16'b0000000011110100; end //x >= 3.0
-   else if(lut_in >= 16'b0000001011100110) begin lut_out <= 16'b0000000011110011; end //x >= 2.9
-   else if(lut_in >= 16'b0000001011001101) begin lut_out <= 16'b0000000011110001; end //x >= 2.8
-   else if(lut_in >= 16'b0000001010110011) begin lut_out <= 16'b0000000011110000; end //x >= 2.7
-   else if(lut_in >= 16'b0000001010011010) begin lut_out <= 16'b0000000011101110; end //x >= 2.6
-   else if(lut_in >= 16'b0000001010000000) begin lut_out <= 16'b0000000011101101; end //x >= 2.5
-   else if(lut_in >= 16'b0000001001100110) begin lut_out <= 16'b0000000011101011; end //x >= 2.4
-   else if(lut_in >= 16'b0000001001001101) begin lut_out <= 16'b0000000011101001; end //x >= 2.3
-   else if(lut_in >= 16'b0000001000110011) begin lut_out <= 16'b0000000011100110; end //x >= 2.2
-   else if(lut_in >= 16'b0000001000011010) begin lut_out <= 16'b0000000011100100; end //x >= 2.1
-   else if(lut_in >= 16'b0000001000000000) begin lut_out <= 16'b0000000011100001; end //x >= 2.0
-   else if(lut_in >= 16'b0000000111100110) begin lut_out <= 16'b0000000011011111; end //x >= 1.9
-   else if(lut_in >= 16'b0000000111001101) begin lut_out <= 16'b0000000011011100; end //x >= 1.8
-   else if(lut_in >= 16'b0000000110110011) begin lut_out <= 16'b0000000011011000; end //x >= 1.7
-   else if(lut_in >= 16'b0000000110011010) begin lut_out <= 16'b0000000011010101; end //x >= 1.6
-   else if(lut_in >= 16'b0000000110000000) begin lut_out <= 16'b0000000011010001; end //x >= 1.5
-   else if(lut_in >= 16'b0000000101100110) begin lut_out <= 16'b0000000011001101; end //x >= 1.4
-   else if(lut_in >= 16'b0000000101001101) begin lut_out <= 16'b0000000011001001; end //x >= 1.3
-   else if(lut_in >= 16'b0000000100110011) begin lut_out <= 16'b0000000011000101; end //x >= 1.2
-   else if(lut_in >= 16'b0000000100011010) begin lut_out <= 16'b0000000011000000; end //x >= 1.1
-   else if(lut_in >= 16'b0000000100000000) begin lut_out <= 16'b0000000010111011; end //x >= 1.0
-   else if(lut_in >= 16'b0000000011100110) begin lut_out <= 16'b0000000010110110; end //x >= 0.9
-   else if(lut_in >= 16'b0000000011001101) begin lut_out <= 16'b0000000010110001; end //x >= 0.8
-   else if(lut_in >= 16'b0000000010110011) begin lut_out <= 16'b0000000010101011; end //x >= 0.7
-   else if(lut_in >= 16'b0000000010011010) begin lut_out <= 16'b0000000010100101; end //x >= 0.6
-   else if(lut_in >= 16'b0000000010000000) begin lut_out <= 16'b0000000010011111; end //x >= 0.5
-   else if(lut_in >= 16'b0000000001100110) begin lut_out <= 16'b0000000010011001; end //x >= 0.4
-   else if(lut_in >= 16'b0000000001001101) begin lut_out <= 16'b0000000010010011; end //x >= 0.3
-   else if(lut_in >= 16'b0000000000110011) begin lut_out <= 16'b0000000010001101; end //x >= 0.2
-   else if(lut_in >= 16'b0000000000011010) begin lut_out <= 16'b0000000010000110; end //x >= 0.1
-   else  begin lut_out <= 16'b0000000010000000; end //x >= 0.0 if(lut_in >= 16'b0000000000000000)
+always @ (posedge clk)
+begin   
+   sign_bit <= sig_in[15];                          
+   if(lut_in >= 16'b0000000000000000 && lut_in < 16'b0000000000011010) begin lut_out <= 16'b0000000010000000; end //0.0
+   if(lut_in >= 16'b0000000000011010 && lut_in < 16'b0000000000110011) begin lut_out <= 16'b0000000001111010; end //0.1
+   if(lut_in >= 16'b0000000000110011 && lut_in < 16'b0000000001001101) begin lut_out <= 16'b0000000001110011; end //0.2
+   if(lut_in >= 16'b0000000001001101 && lut_in < 16'b0000000001100110) begin lut_out <= 16'b0000000001101101; end //0.3
+   if(lut_in >= 16'b0000000001100110 && lut_in < 16'b0000000010000000) begin lut_out <= 16'b0000000001100111; end //0.4
+   if(lut_in >= 16'b0000000010000000 && lut_in < 16'b0000000010011010) begin lut_out <= 16'b0000000001100001; end //0.5
+   if(lut_in >= 16'b0000000010011010 && lut_in < 16'b0000000010110011) begin lut_out <= 16'b0000000001011011; end //0.6
+   if(lut_in >= 16'b0000000010110011 && lut_in < 16'b0000000011001101) begin lut_out <= 16'b0000000001010101; end //0.7
+   if(lut_in >= 16'b0000000011001101 && lut_in < 16'b0000000011100110) begin lut_out <= 16'b0000000001001111; end //0.8
+   if(lut_in >= 16'b0000000011100110 && lut_in < 16'b0000000100000000) begin lut_out <= 16'b0000000001001010; end //0.9
+   if(lut_in >= 16'b0000000100000000 && lut_in < 16'b0000000100011010) begin lut_out <= 16'b0000000001000101; end //1.0
+   if(lut_in >= 16'b0000000100011010 && lut_in < 16'b0000000100110011) begin lut_out <= 16'b0000000001000000; end //1.1
+   if(lut_in >= 16'b0000000100110011 && lut_in < 16'b0000000101001101) begin lut_out <= 16'b0000000000111011; end //1.2
+   if(lut_in >= 16'b0000000101001101 && lut_in < 16'b0000000101100110) begin lut_out <= 16'b0000000000110111; end //1.3
+   if(lut_in >= 16'b0000000101100110 && lut_in < 16'b0000000110000000) begin lut_out <= 16'b0000000000110011; end //1.4
+   if(lut_in >= 16'b0000000110000000 && lut_in < 16'b0000000110011010) begin lut_out <= 16'b0000000000101111; end //1.5
+   if(lut_in >= 16'b0000000110011010 && lut_in < 16'b0000000110110011) begin lut_out <= 16'b0000000000101011; end //1.6
+   if(lut_in >= 16'b0000000110110011 && lut_in < 16'b0000000111001101) begin lut_out <= 16'b0000000000101000; end //1.7
+   if(lut_in >= 16'b0000000111001101 && lut_in < 16'b0000000111100110) begin lut_out <= 16'b0000000000100100; end //1.8
+   if(lut_in >= 16'b0000000111100110 && lut_in < 16'b0000001000000000) begin lut_out <= 16'b0000000000100001; end //1.9
+   if(lut_in >= 16'b0000001000000000 && lut_in < 16'b0000001000011010) begin lut_out <= 16'b0000000000011111; end //2.0
+   if(lut_in >= 16'b0000001000011010 && lut_in < 16'b0000001000110011) begin lut_out <= 16'b0000000000011100; end //2.1
+   if(lut_in >= 16'b0000001000110011 && lut_in < 16'b0000001001001101) begin lut_out <= 16'b0000000000011010; end //2.2
+   if(lut_in >= 16'b0000001001001101 && lut_in < 16'b0000001001100110) begin lut_out <= 16'b0000000000010111; end //2.3
+   if(lut_in >= 16'b0000001001100110 && lut_in < 16'b0000001010000000) begin lut_out <= 16'b0000000000010101; end //2.4
+   if(lut_in >= 16'b0000001010000000 && lut_in < 16'b0000001010011010) begin lut_out <= 16'b0000000000010011; end //2.5
+   if(lut_in >= 16'b0000001010011010 && lut_in < 16'b0000001010110011) begin lut_out <= 16'b0000000000010010; end //2.6
+   if(lut_in >= 16'b0000001010110011 && lut_in < 16'b0000001011001101) begin lut_out <= 16'b0000000000010000; end //2.7
+   if(lut_in >= 16'b0000001011001101 && lut_in < 16'b0000001011100110) begin lut_out <= 16'b0000000000001111; end //2.8
+   if(lut_in >= 16'b0000001011100110 && lut_in < 16'b0000001100000000) begin lut_out <= 16'b0000000000001101; end //2.9
+   if(lut_in >= 16'b0000001100000000 && lut_in < 16'b0000001100011010) begin lut_out <= 16'b0000000000001100; end //3.0
+   if(lut_in >= 16'b0000001100011010 && lut_in < 16'b0000001100110011) begin lut_out <= 16'b0000000000001011; end //3.1
+   if(lut_in >= 16'b0000001100110011 && lut_in < 16'b0000001101001101) begin lut_out <= 16'b0000000000001010; end //3.2
+   if(lut_in >= 16'b0000001101001101 && lut_in < 16'b0000001101100110) begin lut_out <= 16'b0000000000001001; end //3.3
+   if(lut_in >= 16'b0000001101100110 && lut_in < 16'b0000001110011010) begin lut_out <= 16'b0000000000001000; end //3.4
+   if(lut_in >= 16'b0000001110011010 && lut_in < 16'b0000001110110011) begin lut_out <= 16'b0000000000000111; end //3.6
+   if(lut_in >= 16'b0000001110110011 && lut_in < 16'b0000001111100110) begin lut_out <= 16'b0000000000000110; end //3.7
+   if(lut_in >= 16'b0000001111100110 && lut_in < 16'b0000010000011010) begin lut_out <= 16'b0000000000000101; end //3.9
+   if(lut_in >= 16'b0000010000011010 && lut_in < 16'b0000010001001101) begin lut_out <= 16'b0000000000000100; end //4.1
+   if(lut_in >= 16'b0000010001001101 && lut_in < 16'b0000010010110011) begin lut_out <= 16'b0000000000000011; end //4.3
+   if(lut_in >= 16'b0000010010110011 && lut_in < 16'b0000010010110011) begin lut_out <= 16'b0000000000000010; end //4.7
+   if(lut_in >= 16'b0000010010110011 && lut_in < 16'b0000011000000001) begin lut_out <= 16'b0000000000000001; end //5.2
+   if(lut_in >= 16'b0000011000000001)                                  begin lut_out <= 16'b0000000000000000; end //> 6
 end
 
 endmodule

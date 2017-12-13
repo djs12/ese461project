@@ -13,13 +13,13 @@ module controller(
     output reg LUT_mux, // 0: load from reg_holder, 1: load from GSRAM
     
     output reg [3:0] weight2_addr, //0~9
-    output reg weight2_loadNextRow,
     
     output reg [3:0] GSRAM_addr_row, // 0~9
     output reg [3:0] GSRAM_addr_col, // 0~9
     output reg GSRAM_in,
     output reg GSRAM_mux,
-    output reg stage2_gate
+    output reg stage2_gate,
+    output reg stage2_reg_gate
     );
 
 reg [9:0] count_layer1_784D, count_layer1_784Q;
@@ -31,8 +31,10 @@ reg [3:0] currentState, nextState;
 
 parameter IDLE=0, REG=1, REG_TO_LUT=2, LUT_TO_REG=3, REG_TO_MAC=4, TRANS_TO_GSRAM_TO_LUT=5,  GSRAM_TO_LUT=6, LUT_TO_GSRAM=7; //FINAL_ACT_UPDATE_ADDR=8;
 
+
 always @ * begin 
     //default values
+    stage2_reg_gate = 1;
     stage2_gate = 1;
     nextState = currentState;
     count_layer1_784D = count_layer1_784Q + 1;
@@ -46,7 +48,6 @@ always @ * begin
     reg_holder_addr = 0;
     LUT_mux = 0;
     weight2_addr = 0;
-    weight2_loadNextRow = 0;
     GSRAM_addr_row = 0;
     GSRAM_addr_col = 0;
     GSRAM_in = 0; 
@@ -68,9 +69,13 @@ always @ * begin
         end
 
         if (count_layer1_784Q == 783) begin //if one round has completed
+            stage2_reg_gate = 1;
             count_layer1_784D = 0;
             count_layer1_200D = count_layer1_200Q + 1;
             nextState = REG;
+        end
+        else begin
+           stage2_reg_gate = 0;
         end
     end
     
@@ -99,7 +104,6 @@ always @ * begin
         if (count_20Q==19) begin
             count_10D = 0;
             count_20D = 0;
-            weight2_loadNextRow = 1;
             nextState = REG_TO_MAC;
         end else begin
             count_20D = count_20Q + 1;
@@ -140,6 +144,7 @@ always @ * begin
     end
 
     TRANS_TO_GSRAM_TO_LUT: begin
+        stage2_reg_gate = 0;
         GSRAM_addr_row = count_10Q;
         GSRAM_addr_col = count_10_2Q;
         GSRAM_in = 0;
@@ -147,6 +152,7 @@ always @ * begin
     end
 
     GSRAM_TO_LUT: begin
+        stage2_reg_gate = 0;
         GSRAM_addr_row = count_10Q;
         GSRAM_addr_col = count_10_2Q;
         LUT_mux = 1; //load from GSRAM
@@ -163,6 +169,7 @@ always @ * begin
     end
 */
     LUT_TO_GSRAM: begin  // state 8
+        stage2_reg_gate = 0;
         GSRAM_addr_row = count_10Q;
         GSRAM_addr_col = count_10_2Q;
         GSRAM_in = 1; 

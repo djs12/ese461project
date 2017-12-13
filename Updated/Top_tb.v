@@ -6,7 +6,6 @@ reg  clk;
 reg  reset;
 reg inputSramWe;
 reg w2SramWe;
-wire w2LoadNextRow;
 reg [89:0] pixels;
 wire [15:0] product;
 reg [8:0] weight1;
@@ -53,7 +52,7 @@ integer w2FileOffset;
 reg [3:0] w2SramAddr;
 
 
-Top DUT(.clk(clk), .reset(reset), .inputSramWe(inputSramWe), .pixels(pixels), .weight1(weight1), .w2SramWeOffChip(w2SramWe), .weight2(weight2), .weight2AddrOffChip(w2SramAddr), .weight2_loadNextRow(w2LoadNextRow), .rdata(product));
+Top DUT(.clk(clk), .reset(reset), .inputSramWe(inputSramWe), .pixels(pixels), .weight1(weight1), .w2SramWeOffChip(w2SramWe), .weight2(weight2), .weight2AddrOffChip(w2SramAddr), .rdata(product));
 
 initial
 begin

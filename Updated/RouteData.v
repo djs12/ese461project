@@ -1,6 +1,6 @@
-module RouteData(clk, M1Result, SigFeedback, SramData, RegLoadEn, RegLoadSel, Addr, DataOutSel, DataOut, DataToM2);
+module RouteData(clk, Gate, M1Result, SigFeedback, SramData, RegLoadEn, RegLoadSel, Addr, DataOutSel, DataOut, DataToM2);
 
-input clk, RegLoadEn, RegLoadSel, DataOutSel;
+input clk, Gate, RegLoadEn, RegLoadSel, DataOutSel;
 input [159:0] M1Result;
 input [15:0] SigFeedback;
 input [3:0] Addr;
@@ -9,9 +9,11 @@ output reg [15:0] DataOut;
 output reg [15:0]  DataToM2;
 
 reg [159:0] regData;
+wire clkGate;
 
+assign clkGate = Gate & clk;
 
-always @ (posedge clk)
+always @ (posedge clkGate)
 begin
    if(RegLoadEn == 1 && RegLoadSel == 0) begin
      regData[15:0] <= M1Result[15:0];

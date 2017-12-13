@@ -7,7 +7,6 @@ weight1,
 w2SramWeOffChip,
 weight2,
 weight2AddrOffChip,
-weight2_loadNextRow,
 rdata
 );
 
@@ -18,7 +17,6 @@ reset,
 pixels,
 weight1,
 weight2,
-weight2_loadNextRow
 );
 */
 
@@ -37,7 +35,6 @@ input [15:0] weight2;
 input [3:0] weight2AddrOffChip;
 //input [15:0] weight2;
 output signed [15:0] rdata;
-output weight2_loadNextRow;
 
 
 /*
@@ -78,6 +75,7 @@ wire routeDataRegWrSel;
 wire routeDataOutMuxSel;
 wire [3:0] routeDataRegAddr;
 wire stage2Gate;
+wire regGate;
 
 /*
 *************************************************************************
@@ -109,16 +107,17 @@ controller CNTRL(
 .reg_holder_addr(routeDataRegAddr),
 .LUT_mux(routeDataOutMuxSel),
 .weight2_addr(addr),
-.weight2_loadNextRow(weight2_loadNextRow),
 .GSRAM_addr_row(row),
 .GSRAM_addr_col(col),
 .GSRAM_in(we),
 .GSRAM_mux(gSramMuxSel),
-.stage2_gate(stage2Gate)
+.stage2_gate(stage2Gate),
+.stage2_reg_gate(regGate)
 );
 
 RouteData ROUTEDATA(
 .clk(clk),
+.Gate(regGate),
 .M1Result(column),
 .SigFeedback(sig_out),
 .SramData(rdata),
