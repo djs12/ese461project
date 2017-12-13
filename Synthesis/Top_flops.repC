@@ -3,7 +3,7 @@
 Report : register
 Design : Top
 Version: J-2014.09-SP5
-Date   : Mon Dec 11 19:44:28 2017
+Date   : Tue Dec 12 21:48:23 2017
 ****************************************
 
 Attributes:
@@ -3351,23 +3351,6 @@ INPUTSRAM/mem_i_reg[0][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[0][8] dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/mem_i_reg[0][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[0][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[0][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[0][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[0][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[0][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/mem_i_reg[1][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[1][1] dp_1            vtvt_tsmc180    174.522598
@@ -3385,26 +3368,6 @@ INPUTSRAM/mem_i_reg[1][6] dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/mem_i_reg[1][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[1][8] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[1][15]
-                          dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[2][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3424,23 +3387,6 @@ INPUTSRAM/mem_i_reg[2][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[2][8] dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/mem_i_reg[2][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[2][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[2][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[2][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[2][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[2][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/mem_i_reg[3][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[3][1] dp_1            vtvt_tsmc180    174.522598
@@ -3458,26 +3404,6 @@ INPUTSRAM/mem_i_reg[3][6] dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/mem_i_reg[3][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[3][8] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[3][15]
-                          dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[4][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3497,26 +3423,6 @@ INPUTSRAM/mem_i_reg[4][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[4][8] dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/mem_i_reg[4][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[4][15]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/mem_i_reg[5][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[5][1] dp_1            vtvt_tsmc180    174.522598
@@ -3534,26 +3440,6 @@ INPUTSRAM/mem_i_reg[5][6] dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/mem_i_reg[5][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[5][8] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[5][15]
-                          dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[6][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3573,26 +3459,6 @@ INPUTSRAM/mem_i_reg[6][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[6][8] dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/mem_i_reg[6][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[6][15]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/mem_i_reg[7][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[7][1] dp_1            vtvt_tsmc180    174.522598
@@ -3610,26 +3476,6 @@ INPUTSRAM/mem_i_reg[7][6] dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/mem_i_reg[7][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[7][8] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[7][15]
-                          dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[8][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3649,26 +3495,6 @@ INPUTSRAM/mem_i_reg[8][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[8][8] dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/mem_i_reg[8][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[8][15]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/mem_i_reg[9][0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[9][1] dp_1            vtvt_tsmc180    174.522598
@@ -3686,26 +3512,6 @@ INPUTSRAM/mem_i_reg[9][6] dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/mem_i_reg[9][7] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/mem_i_reg[9][8] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][9] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][10]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][11]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][12]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][13]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][14]
-                          dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/mem_i_reg[9][15]
-                          dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[0]        dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3725,18 +3531,6 @@ INPUTSRAM/q_reg[7]        dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[8]        dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/q_reg[9]        dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[10]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[11]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[12]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[13]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[14]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/q_reg[16]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[17]       dp_1            vtvt_tsmc180    174.522598
@@ -3754,20 +3548,6 @@ INPUTSRAM/q_reg[22]       dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/q_reg[23]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[24]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[25]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[26]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[27]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[28]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[29]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[30]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[31]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[32]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3787,18 +3567,6 @@ INPUTSRAM/q_reg[39]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[40]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/q_reg[41]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[42]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[43]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[44]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[45]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[46]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/q_reg[48]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[49]       dp_1            vtvt_tsmc180    174.522598
@@ -3816,20 +3584,6 @@ INPUTSRAM/q_reg[54]       dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/q_reg[55]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[56]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[57]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[58]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[59]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[60]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[61]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[62]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[63]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[64]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3849,20 +3603,6 @@ INPUTSRAM/q_reg[71]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[72]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/q_reg[73]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[74]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[75]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[76]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[77]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[78]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[79]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/q_reg[80]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[81]       dp_1            vtvt_tsmc180    174.522598
@@ -3880,20 +3620,6 @@ INPUTSRAM/q_reg[86]       dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/q_reg[87]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[88]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[89]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[90]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[91]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[92]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[93]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[94]       dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[95]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[96]       dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3913,20 +3639,6 @@ INPUTSRAM/q_reg[103]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[104]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/q_reg[105]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[106]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[107]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[108]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[109]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[110]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[111]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/q_reg[112]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[113]      dp_1            vtvt_tsmc180    174.522598
@@ -3944,20 +3656,6 @@ INPUTSRAM/q_reg[118]      dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/q_reg[119]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[120]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[121]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[122]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[123]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[124]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[125]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[126]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[127]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[128]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -3977,20 +3675,6 @@ INPUTSRAM/q_reg[135]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[136]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
-INPUTSRAM/q_reg[137]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[138]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[139]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[140]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[141]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[142]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[143]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
 INPUTSRAM/q_reg[144]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[145]      dp_1            vtvt_tsmc180    174.522598
@@ -4008,20 +3692,6 @@ INPUTSRAM/q_reg[150]      dp_1            vtvt_tsmc180    174.522598
 INPUTSRAM/q_reg[151]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 INPUTSRAM/q_reg[152]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[153]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[154]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[155]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[156]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[157]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[158]      dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-INPUTSRAM/q_reg[159]      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 ROUTEDATA/DataToM2_reg[0] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -4457,6 +4127,8 @@ SIGMOID/lut_out_reg[6]    dp_1            vtvt_tsmc180    174.522598
                                                                     n
 SIGMOID/lut_out_reg[7]    dp_1            vtvt_tsmc180    174.522598
                                                                     n
+SIGMOID/lut_out_reg[8]    dp_1            vtvt_tsmc180    174.522598
+                                                                    n
 SIGMOID/sign_bit_reg      dp_1            vtvt_tsmc180    174.522598
                                                                     n
 STAGE_1/M1/result_reg[0]  dp_1            vtvt_tsmc180    174.522598
@@ -4800,20 +4472,6 @@ STAGE_1/weightReg_reg[5]  dp_1            vtvt_tsmc180    174.522598
 STAGE_1/weightReg_reg[6]  dp_1            vtvt_tsmc180    174.522598
                                                                     n
 STAGE_1/weightReg_reg[7]  dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[8]  dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[9]  dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[10] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[11] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[12] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[13] dp_1            vtvt_tsmc180    174.522598
-                                                                    n
-STAGE_1/weightReg_reg[14] dp_1            vtvt_tsmc180    174.522598
                                                                     n
 STAGE_1/weightReg_reg[15] dp_1            vtvt_tsmc180    174.522598
                                                                     n
@@ -5230,5 +4888,5 @@ WEIGHT_2/q_reg[14]        dp_1            vtvt_tsmc180    174.522598
 WEIGHT_2/q_reg[15]        dp_1            vtvt_tsmc180    174.522598
                                                                     n
 --------------------------------------------------------------------------------
-Total 2503 cells                                          436830.063461
+Total 2361 cells                                          412047.854507
 1
