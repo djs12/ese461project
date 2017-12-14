@@ -1,0 +1,361 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_databases -value {{gui_open_db -file /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/Top.vcd -design V1} {gui_open_db -file /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/Top.vcd.vpd -design V1} {gui_open_db -file /home/warehouse/drskelton/ese461/ProjectSigmoidRetest/Top.vcd -design V1} {gui_open_db -file /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/Top.vcd -design V2} {gui_open_db -file /home/warehouse/drskelton/ese461/ProjectTestFolder/Top.vcd -design V1}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1435
+gui_set_state_value -category Layout -key child_console_size_y -value 105
+gui_set_state_value -category Layout -key child_data_coltype -value 55
+gui_set_state_value -category Layout -key child_data_colvalue -value 115
+gui_set_state_value -category Layout -key child_data_colvariable -value 155
+gui_set_state_value -category Layout -key child_data_size_x -value 188
+gui_set_state_value -category Layout -key child_data_size_y -value 419
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colhier -value 144
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_coltype -value 104
+gui_set_state_value -category Layout -key child_hier_size_x -value 257
+gui_set_state_value -category Layout -key child_hier_size_y -value 419
+gui_set_state_value -category Layout -key child_list_down -value 201
+gui_set_state_value -category Layout -key child_list_right -value 442
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 993
+gui_set_state_value -category Layout -key child_source_size_y -value 414
+gui_set_state_value -category Layout -key child_watch_docknewline -value true
+gui_set_state_value -category Layout -key child_watch_size_x -value 1917
+gui_set_state_value -category Layout -key child_watch_size_y -value 105
+gui_set_state_value -category Layout -key child_wave_colname -value 197
+gui_set_state_value -category Layout -key child_wave_colvalue -value 197
+gui_set_state_value -category Layout -key child_wave_left -value 399
+gui_set_state_value -category Layout -key child_wave_right -value 973
+gui_set_state_value -category Layout -key main_pos_x -value {-283}
+gui_set_state_value -category Layout -key main_pos_y -value 67
+gui_set_state_value -category Layout -key main_size_x -value 1152
+gui_set_state_value -category Layout -key main_size_y -value 690
+gui_set_state_value -category Layout -key stand_list_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_list_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_list_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_list_child_size_x -value 602
+gui_set_state_value -category Layout -key stand_list_child_size_y -value 346
+gui_set_state_value -category Layout -key stand_list_top_pos_x -value 503
+gui_set_state_value -category Layout -key stand_list_top_pos_y -value 121
+gui_set_state_value -category Layout -key stand_list_top_size_y -value 618
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1382
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 518
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 28
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 75
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1405
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 697
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category Widget_History -key {dveFileDialogImpl|directory history/editor} -value_type string -value /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/
+gui_state_default_create -off
+
+# Begin command logging
+gui_open_db -file /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/Top.vcd.vpd -design V1
+gui_list_select -id Hier.1 -current_item_name Top_tb -current_item_type Scope  -selected  { Top_tb   }
+gui_list_expand -id  Hier.1   Top_tb
+gui_list_select -id Hier.1 -current_item_name Top_tb.DUT -current_item_type Scope  -selected  { Top_tb.DUT   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { Top_tb.DUT } -insertionbar
+gui_marker_move -id  Wave.1 C1 117
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_select -id Wave.1 -selected  { Top_tb.DUT.clk   }
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_wv_scrollright -id  Wave.1  line
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 9942
+gui_marker_move -id  Wave.1 C1 41213
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3136000000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3152175880
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3151751383
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 3151750009
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 3151749998
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_list_collapse -id  Wave.1   DUT
+gui_delete_selected -id  Wave.1
+gui_list_select -id Hier.1 -current_item_name Top_tb.DUT -current_item_type Scope  -selected  {  }
+gui_list_expand -id  Hier.1   Top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name Top_tb.DUT.ANSWER -current_item_type Scope  -selected  { Top_tb.DUT.ANSWER   }
+gui_list_add -id Wave.1 -from Hier.1 { Top_tb.DUT.ANSWER } -insertionbar
+gui_list_action -id  Hier.1 Top_tb.DUT.ANSWER
+gui_marker_move -id  Wave.1 C1 3146850000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3146850000
+gui_marker_move -id  Wave.1 C1 3146830000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_marker_move -id  Wave.1 C1 3146850000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3146843997
+gui_marker_move -id  Wave.1 C1 3146772738
+gui_marker_move -id  Wave.1 C1 3146850000
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 3146250000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_close_window -window TopLevel.2
+gui_list_collapse -id  Hier.1   Top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name Top_tb.DUT -current_item_type Scope  -selected  { Top_tb.DUT   }
+gui_list_expand -id  Hier.1   Top_tb.DUT
+gui_list_select -id Hier.1 -current_item_name Top_tb.DUT.ROUTEDATA -current_item_type Scope  -selected  { Top_tb.DUT.ROUTEDATA   }
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Hier.1 { Top_tb.DUT.ROUTEDATA } -insertionbar
+gui_marker_move -id  Wave.1 C1 54
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_marker_move -id  Wave.1 C1 15750000
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 0.5
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_zoom -window Wave.1 -factor 2
+gui_list_select -id Wave.1 -selected  { Top_tb.DUT.ROUTEDATA.RegLoadSel   }
+gui_wv_zoom_timerange -id  Wave.1 15688434 16011679
+gui_wv_zoom_timerange -id  Wave.1 15688434 16013719
+gui_wv_zoom_timerange -id  Wave.1 15688434 16017457
+gui_wv_zoom_timerange -id  Wave.1 15688434 16019497
+gui_wv_zoom_timerange -id  Wave.1 15688434 16020177
+gui_wv_zoom_timerange -id  Wave.1 15688434 16024935
+gui_wv_zoom_timerange -id  Wave.1 15688434 16025615
+gui_wv_zoom_timerange -id  Wave.1 15688434 16031393
+gui_wv_zoom_timerange -id  Wave.1 15688434 16032753
+gui_wv_zoom_timerange -id  Wave.1 15688434 16040231
+gui_wv_zoom_timerange -id  Wave.1 15688434 16040911
+gui_wv_zoom_timerange -id  Wave.1 15688434 16046689
+gui_wv_zoom_timerange -id  Wave.1 15688434 16046689
+gui_wv_zoom_timerange -id  Wave.1 15688434 16048048
+gui_wv_zoom_timerange -id  Wave.1 15688434 16048048
+gui_wv_zoom_timerange -id  Wave.1 15688434 16050428
+gui_wv_zoom_timerange -id  Wave.1 15688434 16050428
+gui_wv_zoom_timerange -id  Wave.1 15688434 16051447
+gui_wv_zoom_timerange -id  Wave.1 15688434 16051447
+gui_wv_zoom_timerange -id  Wave.1 15688434 16051447
+gui_wv_zoom_timerange -id  Wave.1 15688434 16051447
+gui_close_window -window TopLevel.2
