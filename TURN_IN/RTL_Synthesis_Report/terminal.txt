@@ -1,0 +1,1874 @@
+
+Warning:  Site Information is not available ... Have you run install_site?
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+          Version J-2014.09-SP5 for RHEL64 -- Apr 22, 2015
+               Copyright (c) 1988-2015 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+#######################################################################
+# User Defined Parameters
+# You need to changes this parameters to fit you own design
+#######################################################################
+# Give the list of your verilog files
+# If you have single file in your design, then
+#set my_verilog_files [list Top.v SRAMA.v SRAMB.v DotProduct.v DotProductController.v Accumulator.v Mult.v RightShiftParallelOutRegister.v RightShiftSerialOutRegister.v LeftShiftParallelOutRegister.v]
+# If you have single file in your design
+set my_verilog_files [list Top.v controller.v gSRAM.v Layer1Calc.v Mac.v RouteData.v Sigmoid.v w2SRAM.v inputSRAM.v]
+Top.v controller.v gSRAM.v Layer1Calc.v Mac.v RouteData.v Sigmoid.v w2SRAM.v inputSRAM.v
+# Set the top module of your design
+set my_toplevel Top
+Top
+# set the clock period in ps
+set CLK_PERIOD 50000
+50000
+# setting the port of clock, this is the input Clock from your design
+set CLOCK_INPUT clk
+clk
+#######################################################################
+# The following part needs no modifications
+#######################################################################
+####################################
+# Use multiple cores               # 
+####################################
+set_host_options -max_cores 16
+Warning: You requested 16 cores. However, load on host linuxlab005.seas.wustl.edu is 2.71. Tool will ignore the request and use 14 cores. (UIO-231)
+1
+####################################
+# Setup library                    # 
+####################################
+# allows files to be read in without specifying the directory path
+set search_path ". ../ /project/linuxlab/synopsys/syncore/libraries /project/linuxlab/synopsys/syncore/minpower/syn /project/linuxlab/synopsys/syncore/dw/syn_ver /project/linuxlab/synopsys/syncore/dw/sin_ver /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs"
+. ../ /project/linuxlab/synopsys/syncore/libraries /project/linuxlab/synopsys/syncore/minpower/syn /project/linuxlab/synopsys/syncore/dw/syn_ver /project/linuxlab/synopsys/syncore/dw/sin_ver /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs
+# Technology cell symbol library 
+set symbol_lib "vtvt_tsmc180.sdb"
+vtvt_tsmc180.sdb
+# Technology cell files
+set target_library "vtvt_tsmc180.db"
+vtvt_tsmc180.db
+# Used during design linking
+set link_library "* dw_foundation.sldb vtvt_tsmc180.db"
+* dw_foundation.sldb vtvt_tsmc180.db
+# Library of designware components
+set synthetic_library "dw_foundation.sldb"
+dw_foundation.sldb
+# Directory where DC placed intermediate files
+define_design_lib WORK -path ./WORK
+1
+# removing high drive inverter
+# set_dont_use inv_4
+#######################################
+# Read in Verilog Source Files        # 
+#######################################
+# This command does the same work of analyze+elaborate
+# read_verilog $my_verilog_files   
+# Translates HDL to intermediate format
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Searching for ./Top.v
+Searching for ../Top.v
+Searching for ./controller.v
+Searching for ../controller.v
+Searching for ./gSRAM.v
+Searching for ../gSRAM.v
+Searching for ./Layer1Calc.v
+Searching for ../Layer1Calc.v
+Searching for ./Mac.v
+Searching for ../Mac.v
+Searching for ./RouteData.v
+Searching for ../RouteData.v
+Searching for ./Sigmoid.v
+Searching for ../Sigmoid.v
+Searching for ./w2SRAM.v
+Searching for ../w2SRAM.v
+Searching for ./inputSRAM.v
+Searching for ../inputSRAM.v
+Compiling source file ../Top.v
+Compiling source file ../controller.v
+Compiling source file ../gSRAM.v
+Compiling source file ../Layer1Calc.v
+Warning:  ../gSRAM.v:49: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ../Mac.v
+Compiling source file ../RouteData.v
+Compiling source file ../Sigmoid.v
+Compiling source file ../w2SRAM.v
+Warning:  ../w2SRAM.v:16: Port q is implicitly typed  (VER-987)
+Compiling source file ../inputSRAM.v
+Warning:  ../inputSRAM.v:12: Port q is implicitly typed  (VER-987)
+Presto compilation completed successfully.
+Loading db file '/project/linuxlab/synopsys/syncore/libraries/syn/dw_foundation.sldb'
+Loading db file '/project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db'
+1
+# Buids generic technology database
+elaborate $my_toplevel
+Loading db file '/project/linuxlab/synopsys/syncore/libraries/syn/gtech.db'
+Loading db file '/project/linuxlab/synopsys/syncore/libraries/syn/standard.sldb'
+  Loading link library 'vtvt_tsmc180'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ../Top.v:161: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 159 in file
+	'../Top.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           163            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'Top'.
+Information: Building the design 'Layer1Calc'. (HDL-193)
+
+Statistics for case statements in always block at line 28 in file
+	'../Layer1Calc.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            30            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Layer1Calc line 22 in file
+		'../Layer1Calc.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    weightReg_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'inputSRAM'. (HDL-193)
+
+Inferred memory devices in process
+	in routine inputSRAM line 21 in file
+		'../inputSRAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      mem_i_reg      | Flip-flop |  90   |  Y  | N  | N  | N  | N  | N  | N  |
+|        q_reg        | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'controller'. (HDL-193)
+
+Statistics for case statements in always block at line 35 in file
+	'../controller.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            60            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine controller line 219 in file
+		'../controller.v'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|     count_20Q_reg     | Flip-flop |   5   |  Y  | N  | N  | N  | N  | N  | N  |
+|    count_10_2Q_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|   currentState_reg    | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_layer1_784Q_reg | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_layer1_200Q_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_layer1_200Q_reg | Flip-flop |   2   |  N  | N  | N  | N  | N  | N  | N  |
+|     count_10Q_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+=================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RouteData'. (HDL-193)
+
+Statistics for case statements in always block at line 16 in file
+	'../RouteData.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            32            |     no/auto      |
+|            47            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 62 in file
+	'../RouteData.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            64            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine RouteData line 16 in file
+		'../RouteData.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     regData_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    DataToM2_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'w2SRAM'. (HDL-193)
+
+Inferred memory devices in process
+	in routine w2SRAM line 26 in file
+		'../w2SRAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     mem_w2_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|        q_reg        | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'gSRAM'. (HDL-193)
+
+Statistics for case statements in always block at line 49 in file
+	'../gSRAM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            51            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine gSRAM line 57 in file
+		'../gSRAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rdata_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|       mem_reg       | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Sigmoid'. (HDL-193)
+
+Statistics for case statements in always block at line 15 in file
+	'../Sigmoid.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            17            |    auto/auto     |
+|            26            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine Sigmoid line 36 in file
+		'../Sigmoid.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     lut_out_reg     | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    sign_bit_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'Mac'. (HDL-193)
+Warning:  ../Mac.v:19: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine Mac line 12 in file
+		'../Mac.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     result_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+# Designate the design to synthesize
+current_design $my_toplevel
+Current design is 'Top'.
+{Top}
+#######################################
+# Verilog (?) Compiler settings       #
+#######################################
+# to make DC not use the assign statement in its output netlist
+set verilogout_no_tri true
+true
+# assume this means DC will ignore the case of the letters in net and module names
+#set verilogout_ignore_case true
+# unconnected nets will be marked by adding a prefix to its name
+set verilogout_unconnected_prefix "UNCONNECTED"
+UNCONNECTED
+# show unconnected pins when creating module ports
+set verilogout_show_unconnected_pins true
+true
+# make sure that vectored ports don't get split up into single bits
+set verilogout_single_bit false
+false
+# generate a netlist without creating an EDIF schematic
+set edifout_netlist_only true
+true
+#######################################
+# Define constraints                  #
+#######################################
+# setting the approximate skew
+set CLK_SKEW [expr 0.025 * $CLK_PERIOD]
+1250.0
+# constraint design area units depends on the technology library
+# set MAX_AREA 20000.0
+# set_max_area $MAX_AREA
+# power constraints
+# set MAX_LEAKAGE_POWER 0.0
+# set_max_leakage_power $MAX_LEAKAGE_POWER
+# set MAX_DYNAMIC_POWER 0.0
+# set_max_dynamic_power $MAX_DYNAMIC_POWER
+# make sure ports aren't connected together
+set_fix_multiple_port_nets -all
+1
+# setting the port of clock
+create_clock -period  $CLK_PERIOD $CLOCK_INPUT
+1
+## Design Rule Constraints
+set DRIVINGCELL inv_1
+inv_1
+set DRIVE_PIN {Y}
+Y
+# set input driving cell strength / Max fanout for all design
+# set_driving_cell -lib_cell $DRIVINGCELL -pin $DRIVE_PIN [all_inputs]
+set_driving_cell -lib_cell $DRIVINGCELL [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+# largest fanout allowed 
+#set MAX_FANOUT 8
+#set_max_fanout $MAX_FANOUT
+# models load on output ports
+#set MAX_OUTPUT_LOAD [load_of ssc_core/buf1a2/A]
+#set_load $MAX_OUTPUT_load [all_outputs]
+set MAX_OUTPUT_load 57.462
+57.462
+set_load $MAX_OUTPUT_load [all_outputs]
+1
+# incase of variable load at each output port
+# set_load <loadvalue> [get_ports {<portnames>}] 
+# set maximum and minimum capacitance 
+# set_max_capacitance
+# set_min_capacitance
+# setting operating conditions if allowed by technology library 
+# set_operating_conditions
+# wireload models
+# set_wireload_model
+# set_wireload_mode 
+set MAX_INPUT_DELAY 0.9
+0.9
+set MIN_INPUT_DELAY 0
+0
+set OUTPUT_MAX_DELAY 0.4
+0.4
+set OUTPUT_MIN_DELAY -0.4
+-0.4
+# models the delay from signal source to design input port
+# set_input_delay
+# models delay from design to output port
+# set_output_delay
+# used when you are translating some netlist from one technology to another
+link
+
+  Linking design 'Top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (9 designs)               /home/warehouse/drskelton/ese461/ProjectTestFolderRd2/RTL_Synthesis_Report/Top.db, etc
+  dw_foundation.sldb (library) /project/linuxlab/synopsys/syncore/libraries/syn/dw_foundation.sldb
+  vtvt_tsmc180 (library)      /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db
+
+1
+# used to generate separate instances within the netlist
+uniquify
+Information: Uniquified 10 instances of design 'Mac'. (OPT-1056)
+1
+#######################################
+# Design Compiler settings            #
+#######################################
+# completely flatten the hierarchy to allow optimization to cross hierarchy boundaries
+ungroup -flatten -all
+Information: Updating graph... (UID-83)
+Warning: Design 'Top' contains 5 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1
+# check internal DC representation for design consistency
+check_design
+ 
+****************************************
+check_design summary:
+Version:     J-2014.09-SP5
+Date:        Wed Dec 13 16:39:08 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               7
+    Cells do not drive (LINT-1)                                     7
+--------------------------------------------------------------------------------
+
+Warning: In design 'Top', cell 'CNTRL/C999' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C998' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C990' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C980' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'CNTRL/C976' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'SIGMOID/B_6' does not drive any nets. (LINT-1)
+Warning: In design 'Top', cell 'SIGMOID/B_5' does not drive any nets. (LINT-1)
+1
+# verifies timing setup is complete
+check_timing
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Warning: Main library 'dw_foundation.sldb' has no time units specified, but library 'vtvt_tsmc180' does. (TIM-107)
+Warning: Main library 'dw_foundation.sldb' has no capacitance units specified, but library 'vtvt_tsmc180' does. (TIM-108)
+Warning: The trip points for the library named vtvt_tsmc180 differ from those in the library named dw_foundation.sldb. (TIM-164)
+Information: Updating design information... (UID-85)
+Warning: Design 'Top' contains 5 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+Warning: The following input ports have no clock_relative delay specified, the command set_input_delay without -clock option will be ignored. (TIM-216)
+--------------------
+reset
+inputSramWe
+pixels[89]
+pixels[88]
+pixels[87]
+pixels[86]
+pixels[85]
+pixels[84]
+pixels[83]
+pixels[82]
+pixels[81]
+pixels[80]
+pixels[79]
+pixels[78]
+pixels[77]
+pixels[76]
+pixels[75]
+pixels[74]
+pixels[73]
+pixels[72]
+pixels[71]
+pixels[70]
+pixels[69]
+pixels[68]
+pixels[67]
+pixels[66]
+pixels[65]
+pixels[64]
+pixels[63]
+pixels[62]
+pixels[61]
+pixels[60]
+pixels[59]
+pixels[58]
+pixels[57]
+pixels[56]
+pixels[55]
+pixels[54]
+pixels[53]
+pixels[52]
+pixels[51]
+pixels[50]
+pixels[49]
+pixels[48]
+pixels[47]
+pixels[46]
+pixels[45]
+pixels[44]
+pixels[43]
+pixels[42]
+pixels[41]
+pixels[40]
+pixels[39]
+pixels[38]
+pixels[37]
+pixels[36]
+pixels[35]
+pixels[34]
+pixels[33]
+pixels[32]
+pixels[31]
+pixels[30]
+pixels[29]
+pixels[28]
+pixels[27]
+pixels[26]
+pixels[25]
+pixels[24]
+pixels[23]
+pixels[22]
+pixels[21]
+pixels[20]
+pixels[19]
+pixels[18]
+pixels[17]
+pixels[16]
+pixels[15]
+pixels[14]
+pixels[13]
+pixels[12]
+pixels[11]
+pixels[10]
+pixels[9]
+pixels[8]
+pixels[7]
+pixels[6]
+pixels[5]
+pixels[4]
+pixels[3]
+pixels[2]
+pixels[1]
+pixels[0]
+weight1[8]
+weight1[7]
+weight1[6]
+weight1[5]
+weight1[4]
+weight1[3]
+weight1[2]
+weight1[1]
+weight1[0]
+w2SramWeOffChip
+weight2[15]
+weight2[14]
+weight2[13]
+weight2[12]
+weight2[11]
+weight2[10]
+weight2[9]
+weight2[8]
+weight2[7]
+weight2[6]
+weight2[5]
+weight2[4]
+weight2[3]
+weight2[2]
+weight2[1]
+weight2[0]
+weight2AddrOffChip[3]
+weight2AddrOffChip[2]
+weight2AddrOffChip[1]
+weight2AddrOffChip[0]
+
+Information: Checking unconstrained_endpoints...
+
+Warning: The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+INPUTSRAM/mem_i_reg[0][0]/next_state
+INPUTSRAM/mem_i_reg[0][0]/synch_enable
+INPUTSRAM/mem_i_reg[0][1]/next_state
+INPUTSRAM/mem_i_reg[0][1]/synch_enable
+INPUTSRAM/mem_i_reg[0][2]/next_state
+INPUTSRAM/mem_i_reg[0][2]/synch_enable
+INPUTSRAM/mem_i_reg[0][3]/next_state
+INPUTSRAM/mem_i_reg[0][3]/synch_enable
+INPUTSRAM/mem_i_reg[0][4]/next_state
+INPUTSRAM/mem_i_reg[0][4]/synch_enable
+INPUTSRAM/mem_i_reg[0][5]/next_state
+INPUTSRAM/mem_i_reg[0][5]/synch_enable
+INPUTSRAM/mem_i_reg[0][6]/next_state
+INPUTSRAM/mem_i_reg[0][6]/synch_enable
+INPUTSRAM/mem_i_reg[0][7]/next_state
+INPUTSRAM/mem_i_reg[0][7]/synch_enable
+INPUTSRAM/mem_i_reg[0][8]/next_state
+INPUTSRAM/mem_i_reg[0][8]/synch_enable
+INPUTSRAM/mem_i_reg[1][0]/next_state
+INPUTSRAM/mem_i_reg[1][0]/synch_enable
+INPUTSRAM/mem_i_reg[1][1]/next_state
+INPUTSRAM/mem_i_reg[1][1]/synch_enable
+INPUTSRAM/mem_i_reg[1][2]/next_state
+INPUTSRAM/mem_i_reg[1][2]/synch_enable
+INPUTSRAM/mem_i_reg[1][3]/next_state
+INPUTSRAM/mem_i_reg[1][3]/synch_enable
+INPUTSRAM/mem_i_reg[1][4]/next_state
+INPUTSRAM/mem_i_reg[1][4]/synch_enable
+INPUTSRAM/mem_i_reg[1][5]/next_state
+INPUTSRAM/mem_i_reg[1][5]/synch_enable
+INPUTSRAM/mem_i_reg[1][6]/next_state
+INPUTSRAM/mem_i_reg[1][6]/synch_enable
+INPUTSRAM/mem_i_reg[1][7]/next_state
+INPUTSRAM/mem_i_reg[1][7]/synch_enable
+INPUTSRAM/mem_i_reg[1][8]/next_state
+INPUTSRAM/mem_i_reg[1][8]/synch_enable
+INPUTSRAM/mem_i_reg[2][0]/next_state
+INPUTSRAM/mem_i_reg[2][0]/synch_enable
+INPUTSRAM/mem_i_reg[2][1]/next_state
+INPUTSRAM/mem_i_reg[2][1]/synch_enable
+INPUTSRAM/mem_i_reg[2][2]/next_state
+INPUTSRAM/mem_i_reg[2][2]/synch_enable
+INPUTSRAM/mem_i_reg[2][3]/next_state
+INPUTSRAM/mem_i_reg[2][3]/synch_enable
+INPUTSRAM/mem_i_reg[2][4]/next_state
+INPUTSRAM/mem_i_reg[2][4]/synch_enable
+INPUTSRAM/mem_i_reg[2][5]/next_state
+INPUTSRAM/mem_i_reg[2][5]/synch_enable
+INPUTSRAM/mem_i_reg[2][6]/next_state
+INPUTSRAM/mem_i_reg[2][6]/synch_enable
+INPUTSRAM/mem_i_reg[2][7]/next_state
+INPUTSRAM/mem_i_reg[2][7]/synch_enable
+INPUTSRAM/mem_i_reg[2][8]/next_state
+INPUTSRAM/mem_i_reg[2][8]/synch_enable
+INPUTSRAM/mem_i_reg[3][0]/next_state
+INPUTSRAM/mem_i_reg[3][0]/synch_enable
+INPUTSRAM/mem_i_reg[3][1]/next_state
+INPUTSRAM/mem_i_reg[3][1]/synch_enable
+INPUTSRAM/mem_i_reg[3][2]/next_state
+INPUTSRAM/mem_i_reg[3][2]/synch_enable
+INPUTSRAM/mem_i_reg[3][3]/next_state
+INPUTSRAM/mem_i_reg[3][3]/synch_enable
+INPUTSRAM/mem_i_reg[3][4]/next_state
+INPUTSRAM/mem_i_reg[3][4]/synch_enable
+INPUTSRAM/mem_i_reg[3][5]/next_state
+INPUTSRAM/mem_i_reg[3][5]/synch_enable
+INPUTSRAM/mem_i_reg[3][6]/next_state
+INPUTSRAM/mem_i_reg[3][6]/synch_enable
+INPUTSRAM/mem_i_reg[3][7]/next_state
+INPUTSRAM/mem_i_reg[3][7]/synch_enable
+INPUTSRAM/mem_i_reg[3][8]/next_state
+INPUTSRAM/mem_i_reg[3][8]/synch_enable
+INPUTSRAM/mem_i_reg[4][0]/next_state
+INPUTSRAM/mem_i_reg[4][0]/synch_enable
+INPUTSRAM/mem_i_reg[4][1]/next_state
+INPUTSRAM/mem_i_reg[4][1]/synch_enable
+INPUTSRAM/mem_i_reg[4][2]/next_state
+INPUTSRAM/mem_i_reg[4][2]/synch_enable
+INPUTSRAM/mem_i_reg[4][3]/next_state
+INPUTSRAM/mem_i_reg[4][3]/synch_enable
+INPUTSRAM/mem_i_reg[4][4]/next_state
+INPUTSRAM/mem_i_reg[4][4]/synch_enable
+INPUTSRAM/mem_i_reg[4][5]/next_state
+INPUTSRAM/mem_i_reg[4][5]/synch_enable
+INPUTSRAM/mem_i_reg[4][6]/next_state
+INPUTSRAM/mem_i_reg[4][6]/synch_enable
+INPUTSRAM/mem_i_reg[4][7]/next_state
+INPUTSRAM/mem_i_reg[4][7]/synch_enable
+INPUTSRAM/mem_i_reg[4][8]/next_state
+INPUTSRAM/mem_i_reg[4][8]/synch_enable
+INPUTSRAM/mem_i_reg[5][0]/next_state
+INPUTSRAM/mem_i_reg[5][0]/synch_enable
+INPUTSRAM/mem_i_reg[5][1]/next_state
+INPUTSRAM/mem_i_reg[5][1]/synch_enable
+INPUTSRAM/mem_i_reg[5][2]/next_state
+INPUTSRAM/mem_i_reg[5][2]/synch_enable
+INPUTSRAM/mem_i_reg[5][3]/next_state
+INPUTSRAM/mem_i_reg[5][3]/synch_enable
+INPUTSRAM/mem_i_reg[5][4]/next_state
+INPUTSRAM/mem_i_reg[5][4]/synch_enable
+INPUTSRAM/mem_i_reg[5][5]/next_state
+INPUTSRAM/mem_i_reg[5][5]/synch_enable
+INPUTSRAM/mem_i_reg[5][6]/next_state
+INPUTSRAM/mem_i_reg[5][6]/synch_enable
+INPUTSRAM/mem_i_reg[5][7]/next_state
+INPUTSRAM/mem_i_reg[5][7]/synch_enable
+INPUTSRAM/mem_i_reg[5][8]/next_state
+INPUTSRAM/mem_i_reg[5][8]/synch_enable
+INPUTSRAM/mem_i_reg[6][0]/next_state
+INPUTSRAM/mem_i_reg[6][0]/synch_enable
+INPUTSRAM/mem_i_reg[6][1]/next_state
+INPUTSRAM/mem_i_reg[6][1]/synch_enable
+INPUTSRAM/mem_i_reg[6][2]/next_state
+INPUTSRAM/mem_i_reg[6][2]/synch_enable
+INPUTSRAM/mem_i_reg[6][3]/next_state
+INPUTSRAM/mem_i_reg[6][3]/synch_enable
+INPUTSRAM/mem_i_reg[6][4]/next_state
+INPUTSRAM/mem_i_reg[6][4]/synch_enable
+INPUTSRAM/mem_i_reg[6][5]/next_state
+INPUTSRAM/mem_i_reg[6][5]/synch_enable
+INPUTSRAM/mem_i_reg[6][6]/next_state
+INPUTSRAM/mem_i_reg[6][6]/synch_enable
+INPUTSRAM/mem_i_reg[6][7]/next_state
+INPUTSRAM/mem_i_reg[6][7]/synch_enable
+INPUTSRAM/mem_i_reg[6][8]/next_state
+INPUTSRAM/mem_i_reg[6][8]/synch_enable
+INPUTSRAM/mem_i_reg[7][0]/next_state
+INPUTSRAM/mem_i_reg[7][0]/synch_enable
+INPUTSRAM/mem_i_reg[7][1]/next_state
+INPUTSRAM/mem_i_reg[7][1]/synch_enable
+INPUTSRAM/mem_i_reg[7][2]/next_state
+INPUTSRAM/mem_i_reg[7][2]/synch_enable
+INPUTSRAM/mem_i_reg[7][3]/next_state
+INPUTSRAM/mem_i_reg[7][3]/synch_enable
+INPUTSRAM/mem_i_reg[7][4]/next_state
+INPUTSRAM/mem_i_reg[7][4]/synch_enable
+INPUTSRAM/mem_i_reg[7][5]/next_state
+INPUTSRAM/mem_i_reg[7][5]/synch_enable
+INPUTSRAM/mem_i_reg[7][6]/next_state
+INPUTSRAM/mem_i_reg[7][6]/synch_enable
+INPUTSRAM/mem_i_reg[7][7]/next_state
+INPUTSRAM/mem_i_reg[7][7]/synch_enable
+INPUTSRAM/mem_i_reg[7][8]/next_state
+INPUTSRAM/mem_i_reg[7][8]/synch_enable
+INPUTSRAM/mem_i_reg[8][0]/next_state
+INPUTSRAM/mem_i_reg[8][0]/synch_enable
+INPUTSRAM/mem_i_reg[8][1]/next_state
+INPUTSRAM/mem_i_reg[8][1]/synch_enable
+INPUTSRAM/mem_i_reg[8][2]/next_state
+INPUTSRAM/mem_i_reg[8][2]/synch_enable
+INPUTSRAM/mem_i_reg[8][3]/next_state
+INPUTSRAM/mem_i_reg[8][3]/synch_enable
+INPUTSRAM/mem_i_reg[8][4]/next_state
+INPUTSRAM/mem_i_reg[8][4]/synch_enable
+INPUTSRAM/mem_i_reg[8][5]/next_state
+INPUTSRAM/mem_i_reg[8][5]/synch_enable
+INPUTSRAM/mem_i_reg[8][6]/next_state
+INPUTSRAM/mem_i_reg[8][6]/synch_enable
+INPUTSRAM/mem_i_reg[8][7]/next_state
+INPUTSRAM/mem_i_reg[8][7]/synch_enable
+INPUTSRAM/mem_i_reg[8][8]/next_state
+INPUTSRAM/mem_i_reg[8][8]/synch_enable
+INPUTSRAM/mem_i_reg[9][0]/next_state
+INPUTSRAM/mem_i_reg[9][0]/synch_enable
+INPUTSRAM/mem_i_reg[9][1]/next_state
+INPUTSRAM/mem_i_reg[9][1]/synch_enable
+INPUTSRAM/mem_i_reg[9][2]/next_state
+INPUTSRAM/mem_i_reg[9][2]/synch_enable
+INPUTSRAM/mem_i_reg[9][3]/next_state
+INPUTSRAM/mem_i_reg[9][3]/synch_enable
+INPUTSRAM/mem_i_reg[9][4]/next_state
+INPUTSRAM/mem_i_reg[9][4]/synch_enable
+INPUTSRAM/mem_i_reg[9][5]/next_state
+INPUTSRAM/mem_i_reg[9][5]/synch_enable
+INPUTSRAM/mem_i_reg[9][6]/next_state
+INPUTSRAM/mem_i_reg[9][6]/synch_enable
+INPUTSRAM/mem_i_reg[9][7]/next_state
+INPUTSRAM/mem_i_reg[9][7]/synch_enable
+INPUTSRAM/mem_i_reg[9][8]/next_state
+INPUTSRAM/mem_i_reg[9][8]/synch_enable
+STAGE_1/weightReg_reg[0]/next_state
+STAGE_1/weightReg_reg[1]/next_state
+STAGE_1/weightReg_reg[2]/next_state
+STAGE_1/weightReg_reg[3]/next_state
+STAGE_1/weightReg_reg[4]/next_state
+STAGE_1/weightReg_reg[5]/next_state
+STAGE_1/weightReg_reg[6]/next_state
+STAGE_1/weightReg_reg[7]/next_state
+STAGE_1/weightReg_reg[8]/next_state
+STAGE_1/weightReg_reg[9]/next_state
+STAGE_1/weightReg_reg[10]/next_state
+STAGE_1/weightReg_reg[11]/next_state
+STAGE_1/weightReg_reg[12]/next_state
+STAGE_1/weightReg_reg[13]/next_state
+STAGE_1/weightReg_reg[14]/next_state
+STAGE_1/weightReg_reg[15]/next_state
+WEIGHT_2/mem_w2_reg[0][0]/next_state
+WEIGHT_2/mem_w2_reg[0][1]/next_state
+WEIGHT_2/mem_w2_reg[0][2]/next_state
+WEIGHT_2/mem_w2_reg[0][3]/next_state
+WEIGHT_2/mem_w2_reg[0][4]/next_state
+WEIGHT_2/mem_w2_reg[0][5]/next_state
+WEIGHT_2/mem_w2_reg[0][6]/next_state
+WEIGHT_2/mem_w2_reg[0][7]/next_state
+WEIGHT_2/mem_w2_reg[0][8]/next_state
+WEIGHT_2/mem_w2_reg[0][9]/next_state
+WEIGHT_2/mem_w2_reg[0][10]/next_state
+WEIGHT_2/mem_w2_reg[0][11]/next_state
+WEIGHT_2/mem_w2_reg[0][12]/next_state
+WEIGHT_2/mem_w2_reg[0][13]/next_state
+WEIGHT_2/mem_w2_reg[0][14]/next_state
+WEIGHT_2/mem_w2_reg[0][15]/next_state
+WEIGHT_2/mem_w2_reg[1][0]/next_state
+WEIGHT_2/mem_w2_reg[1][1]/next_state
+WEIGHT_2/mem_w2_reg[1][2]/next_state
+WEIGHT_2/mem_w2_reg[1][3]/next_state
+WEIGHT_2/mem_w2_reg[1][4]/next_state
+WEIGHT_2/mem_w2_reg[1][5]/next_state
+WEIGHT_2/mem_w2_reg[1][6]/next_state
+WEIGHT_2/mem_w2_reg[1][7]/next_state
+WEIGHT_2/mem_w2_reg[1][8]/next_state
+WEIGHT_2/mem_w2_reg[1][9]/next_state
+WEIGHT_2/mem_w2_reg[1][10]/next_state
+WEIGHT_2/mem_w2_reg[1][11]/next_state
+WEIGHT_2/mem_w2_reg[1][12]/next_state
+WEIGHT_2/mem_w2_reg[1][13]/next_state
+WEIGHT_2/mem_w2_reg[1][14]/next_state
+WEIGHT_2/mem_w2_reg[1][15]/next_state
+WEIGHT_2/mem_w2_reg[2][0]/next_state
+WEIGHT_2/mem_w2_reg[2][1]/next_state
+WEIGHT_2/mem_w2_reg[2][2]/next_state
+WEIGHT_2/mem_w2_reg[2][3]/next_state
+WEIGHT_2/mem_w2_reg[2][4]/next_state
+WEIGHT_2/mem_w2_reg[2][5]/next_state
+WEIGHT_2/mem_w2_reg[2][6]/next_state
+WEIGHT_2/mem_w2_reg[2][7]/next_state
+WEIGHT_2/mem_w2_reg[2][8]/next_state
+WEIGHT_2/mem_w2_reg[2][9]/next_state
+WEIGHT_2/mem_w2_reg[2][10]/next_state
+WEIGHT_2/mem_w2_reg[2][11]/next_state
+WEIGHT_2/mem_w2_reg[2][12]/next_state
+WEIGHT_2/mem_w2_reg[2][13]/next_state
+WEIGHT_2/mem_w2_reg[2][14]/next_state
+WEIGHT_2/mem_w2_reg[2][15]/next_state
+WEIGHT_2/mem_w2_reg[3][0]/next_state
+WEIGHT_2/mem_w2_reg[3][1]/next_state
+WEIGHT_2/mem_w2_reg[3][2]/next_state
+WEIGHT_2/mem_w2_reg[3][3]/next_state
+WEIGHT_2/mem_w2_reg[3][4]/next_state
+WEIGHT_2/mem_w2_reg[3][5]/next_state
+WEIGHT_2/mem_w2_reg[3][6]/next_state
+WEIGHT_2/mem_w2_reg[3][7]/next_state
+WEIGHT_2/mem_w2_reg[3][8]/next_state
+WEIGHT_2/mem_w2_reg[3][9]/next_state
+WEIGHT_2/mem_w2_reg[3][10]/next_state
+WEIGHT_2/mem_w2_reg[3][11]/next_state
+WEIGHT_2/mem_w2_reg[3][12]/next_state
+WEIGHT_2/mem_w2_reg[3][13]/next_state
+WEIGHT_2/mem_w2_reg[3][14]/next_state
+WEIGHT_2/mem_w2_reg[3][15]/next_state
+WEIGHT_2/mem_w2_reg[4][0]/next_state
+WEIGHT_2/mem_w2_reg[4][1]/next_state
+WEIGHT_2/mem_w2_reg[4][2]/next_state
+WEIGHT_2/mem_w2_reg[4][3]/next_state
+WEIGHT_2/mem_w2_reg[4][4]/next_state
+WEIGHT_2/mem_w2_reg[4][5]/next_state
+WEIGHT_2/mem_w2_reg[4][6]/next_state
+WEIGHT_2/mem_w2_reg[4][7]/next_state
+WEIGHT_2/mem_w2_reg[4][8]/next_state
+WEIGHT_2/mem_w2_reg[4][9]/next_state
+WEIGHT_2/mem_w2_reg[4][10]/next_state
+WEIGHT_2/mem_w2_reg[4][11]/next_state
+WEIGHT_2/mem_w2_reg[4][12]/next_state
+WEIGHT_2/mem_w2_reg[4][13]/next_state
+WEIGHT_2/mem_w2_reg[4][14]/next_state
+WEIGHT_2/mem_w2_reg[4][15]/next_state
+WEIGHT_2/mem_w2_reg[5][0]/next_state
+WEIGHT_2/mem_w2_reg[5][1]/next_state
+WEIGHT_2/mem_w2_reg[5][2]/next_state
+WEIGHT_2/mem_w2_reg[5][3]/next_state
+WEIGHT_2/mem_w2_reg[5][4]/next_state
+WEIGHT_2/mem_w2_reg[5][5]/next_state
+WEIGHT_2/mem_w2_reg[5][6]/next_state
+WEIGHT_2/mem_w2_reg[5][7]/next_state
+WEIGHT_2/mem_w2_reg[5][8]/next_state
+WEIGHT_2/mem_w2_reg[5][9]/next_state
+WEIGHT_2/mem_w2_reg[5][10]/next_state
+WEIGHT_2/mem_w2_reg[5][11]/next_state
+WEIGHT_2/mem_w2_reg[5][12]/next_state
+WEIGHT_2/mem_w2_reg[5][13]/next_state
+WEIGHT_2/mem_w2_reg[5][14]/next_state
+WEIGHT_2/mem_w2_reg[5][15]/next_state
+WEIGHT_2/mem_w2_reg[6][0]/next_state
+WEIGHT_2/mem_w2_reg[6][1]/next_state
+WEIGHT_2/mem_w2_reg[6][2]/next_state
+WEIGHT_2/mem_w2_reg[6][3]/next_state
+WEIGHT_2/mem_w2_reg[6][4]/next_state
+WEIGHT_2/mem_w2_reg[6][5]/next_state
+WEIGHT_2/mem_w2_reg[6][6]/next_state
+WEIGHT_2/mem_w2_reg[6][7]/next_state
+WEIGHT_2/mem_w2_reg[6][8]/next_state
+WEIGHT_2/mem_w2_reg[6][9]/next_state
+WEIGHT_2/mem_w2_reg[6][10]/next_state
+WEIGHT_2/mem_w2_reg[6][11]/next_state
+WEIGHT_2/mem_w2_reg[6][12]/next_state
+WEIGHT_2/mem_w2_reg[6][13]/next_state
+WEIGHT_2/mem_w2_reg[6][14]/next_state
+WEIGHT_2/mem_w2_reg[6][15]/next_state
+WEIGHT_2/mem_w2_reg[7][0]/next_state
+WEIGHT_2/mem_w2_reg[7][1]/next_state
+WEIGHT_2/mem_w2_reg[7][2]/next_state
+WEIGHT_2/mem_w2_reg[7][3]/next_state
+WEIGHT_2/mem_w2_reg[7][4]/next_state
+WEIGHT_2/mem_w2_reg[7][5]/next_state
+WEIGHT_2/mem_w2_reg[7][6]/next_state
+WEIGHT_2/mem_w2_reg[7][7]/next_state
+WEIGHT_2/mem_w2_reg[7][8]/next_state
+WEIGHT_2/mem_w2_reg[7][9]/next_state
+WEIGHT_2/mem_w2_reg[7][10]/next_state
+WEIGHT_2/mem_w2_reg[7][11]/next_state
+WEIGHT_2/mem_w2_reg[7][12]/next_state
+WEIGHT_2/mem_w2_reg[7][13]/next_state
+WEIGHT_2/mem_w2_reg[7][14]/next_state
+WEIGHT_2/mem_w2_reg[7][15]/next_state
+WEIGHT_2/mem_w2_reg[8][0]/next_state
+WEIGHT_2/mem_w2_reg[8][1]/next_state
+WEIGHT_2/mem_w2_reg[8][2]/next_state
+WEIGHT_2/mem_w2_reg[8][3]/next_state
+WEIGHT_2/mem_w2_reg[8][4]/next_state
+WEIGHT_2/mem_w2_reg[8][5]/next_state
+WEIGHT_2/mem_w2_reg[8][6]/next_state
+WEIGHT_2/mem_w2_reg[8][7]/next_state
+WEIGHT_2/mem_w2_reg[8][8]/next_state
+WEIGHT_2/mem_w2_reg[8][9]/next_state
+WEIGHT_2/mem_w2_reg[8][10]/next_state
+WEIGHT_2/mem_w2_reg[8][11]/next_state
+WEIGHT_2/mem_w2_reg[8][12]/next_state
+WEIGHT_2/mem_w2_reg[8][13]/next_state
+WEIGHT_2/mem_w2_reg[8][14]/next_state
+WEIGHT_2/mem_w2_reg[8][15]/next_state
+WEIGHT_2/mem_w2_reg[9][0]/next_state
+WEIGHT_2/mem_w2_reg[9][1]/next_state
+WEIGHT_2/mem_w2_reg[9][2]/next_state
+WEIGHT_2/mem_w2_reg[9][3]/next_state
+WEIGHT_2/mem_w2_reg[9][4]/next_state
+WEIGHT_2/mem_w2_reg[9][5]/next_state
+WEIGHT_2/mem_w2_reg[9][6]/next_state
+WEIGHT_2/mem_w2_reg[9][7]/next_state
+WEIGHT_2/mem_w2_reg[9][8]/next_state
+WEIGHT_2/mem_w2_reg[9][9]/next_state
+WEIGHT_2/mem_w2_reg[9][10]/next_state
+WEIGHT_2/mem_w2_reg[9][11]/next_state
+WEIGHT_2/mem_w2_reg[9][12]/next_state
+WEIGHT_2/mem_w2_reg[9][13]/next_state
+WEIGHT_2/mem_w2_reg[9][14]/next_state
+WEIGHT_2/mem_w2_reg[9][15]/next_state
+WEIGHT_2/q_reg[0]/synch_enable
+WEIGHT_2/q_reg[1]/synch_enable
+WEIGHT_2/q_reg[2]/synch_enable
+WEIGHT_2/q_reg[3]/synch_enable
+WEIGHT_2/q_reg[4]/synch_enable
+WEIGHT_2/q_reg[5]/synch_enable
+WEIGHT_2/q_reg[6]/synch_enable
+WEIGHT_2/q_reg[7]/synch_enable
+WEIGHT_2/q_reg[8]/synch_enable
+WEIGHT_2/q_reg[9]/synch_enable
+WEIGHT_2/q_reg[10]/synch_enable
+WEIGHT_2/q_reg[11]/synch_enable
+WEIGHT_2/q_reg[12]/synch_enable
+WEIGHT_2/q_reg[13]/synch_enable
+WEIGHT_2/q_reg[14]/synch_enable
+WEIGHT_2/q_reg[15]/synch_enable
+rdata[0]
+rdata[1]
+rdata[2]
+rdata[3]
+rdata[4]
+rdata[5]
+rdata[6]
+rdata[7]
+rdata[8]
+rdata[9]
+rdata[10]
+rdata[11]
+rdata[12]
+rdata[13]
+rdata[14]
+rdata[15]
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+# enable DC ultra optimizations 
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 14 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | J-2014.09-DWBB_201409.5 |     *     |
+| Licensed DW Building Blocks        | J-2014.09-DWBB_201409.5 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 95 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/vtvt_tsmc180.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Top'
+Information: Added key list 'DesignWare' to design 'Top'. (DDB-72)
+Information: The register 'SIGMOID/lut_out_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'SIGMOID/lut_out_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[159]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[158]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[157]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[156]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[155]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[154]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[153]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[143]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[142]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[141]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[140]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[139]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[138]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[137]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[127]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[126]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[125]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[124]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[123]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[122]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[121]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[111]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[110]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[109]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[108]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[107]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[106]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[105]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[95]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[94]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[93]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[92]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[91]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[90]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[89]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[79]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[78]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[77]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[76]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[75]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[74]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[73]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[63]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[62]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[61]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[60]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[59]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[58]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[57]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[47]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[46]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[45]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[44]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[43]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[42]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[41]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[29]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[28]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[27]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[26]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[25]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[15]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[14]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[13]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[12]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[11]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[10]' is a constant and will be removed. (OPT-1206)
+Information: The register 'INPUTSRAM/q_reg[9]' is a constant and will be removed. (OPT-1206)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[14]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[13]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[12]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[11]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[10]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[9]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+Information: In design 'Top', the register 'STAGE_1/weightReg_reg[8]' is removed because it is merged to 'STAGE_1/weightReg_reg[15]'. (OPT-1215)
+ Implement Synthetic for 'Top'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The register 'CNTRL/currentState_reg[3]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Updating design information... (UID-85)
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:34 1087585.5      0.00       0.0       0.0                              0.0055
+    0:00:34 1087585.5      0.00       0.0       0.0                              0.0055
+    0:00:34 1087585.5      0.00       0.0       0.0                              0.0055
+    0:00:34 1087585.5      0.00       0.0       0.0                              0.0055
+  Re-synthesis Optimization (Phase 1)
+  Re-synthesis Optimization (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:39 1038057.9      0.00       0.0     193.9                              0.0054
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:00:39 1038057.9      0.00       0.0     193.9                              0.0054
+    0:00:39 1038057.9      0.00       0.0     193.9                              0.0054
+    0:00:39 1038057.9      0.00       0.0     193.9                              0.0054
+    0:00:39 1038057.9      0.00       0.0     193.9                              0.0054
+    0:00:40 1038057.9      0.00       0.0     193.9                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+    0:00:41 1038057.9      0.00       0.0       0.0                              0.0054
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:43 1038057.9      0.00       0.0       0.0                              0.0054
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+    0:00:43 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:43 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:43 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:44 1035805.0      0.00       0.0       0.0                              0.0054
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:45 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:45 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:45 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:45 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:46 1035805.0      0.00       0.0       0.0                              0.0054
+
+  Beginning Delay Optimization HSVT Pass
+  --------------------------------------
+    0:00:46 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:46 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:46 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:46 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:47 1035805.0      0.00       0.0       0.0                              0.0054
+    0:00:47 1035805.0      0.00       0.0       0.0                              0.0054
+Loading db file '/project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'Top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'ANSWER/ram_gate': 1616 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+# verifies timing setup is complete
+check_timing
+Information: Updating design information... (UID-85)
+Warning: Design 'Top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+Warning: The following input ports have no clock_relative delay specified, the command set_input_delay without -clock option will be ignored. (TIM-216)
+--------------------
+reset
+inputSramWe
+pixels[89]
+pixels[88]
+pixels[87]
+pixels[86]
+pixels[85]
+pixels[84]
+pixels[83]
+pixels[82]
+pixels[81]
+pixels[80]
+pixels[79]
+pixels[78]
+pixels[77]
+pixels[76]
+pixels[75]
+pixels[74]
+pixels[73]
+pixels[72]
+pixels[71]
+pixels[70]
+pixels[69]
+pixels[68]
+pixels[67]
+pixels[66]
+pixels[65]
+pixels[64]
+pixels[63]
+pixels[62]
+pixels[61]
+pixels[60]
+pixels[59]
+pixels[58]
+pixels[57]
+pixels[56]
+pixels[55]
+pixels[54]
+pixels[53]
+pixels[52]
+pixels[51]
+pixels[50]
+pixels[49]
+pixels[48]
+pixels[47]
+pixels[46]
+pixels[45]
+pixels[44]
+pixels[43]
+pixels[42]
+pixels[41]
+pixels[40]
+pixels[39]
+pixels[38]
+pixels[37]
+pixels[36]
+pixels[35]
+pixels[34]
+pixels[33]
+pixels[32]
+pixels[31]
+pixels[30]
+pixels[29]
+pixels[28]
+pixels[27]
+pixels[26]
+pixels[25]
+pixels[24]
+pixels[23]
+pixels[22]
+pixels[21]
+pixels[20]
+pixels[19]
+pixels[18]
+pixels[17]
+pixels[16]
+pixels[15]
+pixels[14]
+pixels[13]
+pixels[12]
+pixels[11]
+pixels[10]
+pixels[9]
+pixels[8]
+pixels[7]
+pixels[6]
+pixels[5]
+pixels[4]
+pixels[3]
+pixels[2]
+pixels[1]
+pixels[0]
+weight1[8]
+weight1[7]
+weight1[6]
+weight1[5]
+weight1[4]
+weight1[3]
+weight1[2]
+weight1[1]
+weight1[0]
+w2SramWeOffChip
+weight2[15]
+weight2[14]
+weight2[13]
+weight2[12]
+weight2[11]
+weight2[10]
+weight2[9]
+weight2[8]
+weight2[7]
+weight2[6]
+weight2[5]
+weight2[4]
+weight2[3]
+weight2[2]
+weight2[1]
+weight2[0]
+weight2AddrOffChip[3]
+weight2AddrOffChip[2]
+weight2AddrOffChip[1]
+weight2AddrOffChip[0]
+
+Information: Checking unconstrained_endpoints...
+
+Warning: The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+STAGE_1/weightReg_reg[0]/ip
+STAGE_1/weightReg_reg[1]/ip
+STAGE_1/weightReg_reg[2]/ip
+STAGE_1/weightReg_reg[3]/ip
+STAGE_1/weightReg_reg[4]/ip
+STAGE_1/weightReg_reg[5]/ip
+STAGE_1/weightReg_reg[6]/ip
+STAGE_1/weightReg_reg[7]/ip
+STAGE_1/weightReg_reg[15]/ip
+rdata[0]
+rdata[1]
+rdata[2]
+rdata[3]
+rdata[4]
+rdata[5]
+rdata[6]
+rdata[7]
+rdata[8]
+rdata[9]
+rdata[10]
+rdata[11]
+rdata[12]
+rdata[13]
+rdata[14]
+rdata[15]
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1
+# report design size and object counts
+report_area
+ 
+****************************************
+Report : area
+Design : Top
+Version: J-2014.09-SP5
+Date   : Wed Dec 13 16:40:00 2017
+****************************************
+
+Library(s) Used:
+
+    vtvt_tsmc180 (File: /project/linuxlab/cadence/vendors/VTVT/vtvt_tsmc180/Synopsys_Libraries/libs/vtvt_tsmc180.db)
+
+Number of ports:                          139
+Number of nets:                         12990
+Number of cells:                        12187
+Number of combinational cells:           9826
+Number of sequential cells:              2361
+Number of macros/black boxes:               0
+Number of buf/inv:                        809
+Number of references:                      20
+
+Combinational area:             623757.182205
+Buf/Inv area:                    23758.693390
+Noncombinational area:          412047.854507
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1035805.036713
+Total area:                 undefined
+1
+# reports design database constraints attributes
+report_timing_requirements
+ 
+****************************************
+Report : timing_requirements
+        -attributes
+Design : Top
+Version: J-2014.09-SP5
+Date   : Wed Dec 13 16:40:00 2017
+****************************************
+
+1
+#######################################
+# Output files                        #
+#######################################
+# save design
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+Top.ddc
+write -format ddc -hierarchy -output $my_toplevel
+Writing ddc file 'Top'.
+1
+# save delay and parasitic data
+set filename [format "%s%s"  $my_toplevel ".sdf"]
+Top.sdf
+write_sdf -version 1.0 $filename
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/warehouse/drskelton/ese461/ProjectTestFolderRd2/RTL_Synthesis_Report/Top.sdf'. (WT-3)
+1
+# save synthesized verilog netlist
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+Top.syn.v
+write -format verilog -hierarchy -output $filename
+Writing verilog file '/home/warehouse/drskelton/ese461/ProjectTestFolderRd2/RTL_Synthesis_Report/Top.syn.v'.
+1
+# this file is necessary for P&R with Encounter
+set filename [format "%s%s"  $my_toplevel ".sdc"]
+Top.sdc
+write_sdc $filename
+1
+# write milkyway database
+if {[shell_is_in_topographical_mode]} {
+    write_milkyway -output $my_toplevel -overwrite
+}
+redirect [format "%s%s" $my_toplevel  _design.repC] { report_design }
+redirect [format "%s%s" $my_toplevel  _area.repC] { report_area }
+redirect -append [format "%s%s" $my_toplevel  _area.repC] { report_reference }
+redirect [format "%s%s" $my_toplevel  _latches.repC] { report_register -level_sensitive }
+redirect [format "%s%s" $my_toplevel  _flops.repC] { report_register -edge }
+redirect [format "%s%s" $my_toplevel  _violators.repC] { report_constraint -all_violators }
+redirect [format "%s%s" $my_toplevel  _power.repC] { report_power }
+redirect [format "%s%s" $my_toplevel  _max_timing.repC] { report_timing -delay max -nworst 3 -max_paths 20 -greater_path 0 -path full -nosplit}
+redirect [format "%s%s" $my_toplevel  _min_timing.repC] { report_timing -delay min -nworst 3 -max_paths 20 -greater_path 0 -path full -nosplit}
+redirect [format "%s%s" $my_toplevel  _out_min_timing.repC] { report_timing -to [all_outputs] -delay min -nworst 3 -max_paths 1000000 -greater_path 0 -path full -nosplit}
+quit
+
+Thank you...
